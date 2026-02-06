@@ -1,0 +1,131 @@
+:root{
+    --border: rgba(255, 0, 0, 1);
+}
+
+body{
+    margin: 0px;
+}
+
+html, body{
+    border: 2px solid var(--border);
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+
+header{
+    border: 2px solid var(--border);
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 4vh;
+}
+
+header > *{
+    max-height: 12vh;
+    margin: 4vw;
+}
+
+#menu-container{
+    border: 2px solid var(--border);
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-button{
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('../../icons/icons8-menu-48.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 2px solid var(--border);
+    height: 6vh;
+    width: 6vh;
+}
+
+.content-parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto;
+    border: 2px solid var(--border);
+    margin-bottom: 3vh;
+}
+
+.left-parent{
+    justify-content: flex-start;
+}
+
+.left-parent > *{
+    max-width: 55%;
+}
+
+.right-offset-child{
+    border: 2px solid var(--border);
+    border-radius: 10%;
+    height: auto;
+    width: auto;
+    background-color: grey;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    left: 20%;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.left-offset-media{
+    border: 2px solid var(--border);
+    border-radius: 10%;
+    height: 70vw;
+    width: 70vw;
+    margin-right: 40vw;
+    margin-left: 5vw;
+}
+
+h1{
+    border: 2px solid var(--border);
+    margin-left: 5vw;
+    font-size: 10vw;
+}
+
+#options-container{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 10;
+    position: fixed;
+    left: -175%;
+    top: 5%;
+    height: 90vh;
+    border: 2px solid var(--border);
+    background-color: grey;
+    padding-top: 4vh;
+    border-radius: 50px;
+    transition: left 1s ease-in-out;
+}
+
+.show-menu{
+    left: -15% !important;
+}
+
+#options-container *{
+    font-size: 10vw;
+}
+
+.floating-container{
+    border: 2px solid var(--border);
+    width: auto;
+    height: auto;
+    margin-left: 40vw;
+    margin-right: 20vw;
+}
