@@ -57,7 +57,16 @@ header > *{
     height: auto;
     width: auto;
     border: 2px solid var(--border);
-    margin-bottom: 3vh;
+    margin-bottom: 6vh;
+}
+
+.column-parent{
+    flex-direction: column;
+}
+
+.column-parent > *{
+    max-width: 75%;
+    margin-bottom: 0vh;
 }
 
 .left-parent{
@@ -98,6 +107,14 @@ h1{
     font-size: 10vw;
 }
 
+h2{
+    border: 2px solid var(--border);
+    font-size: 7vw;
+    text-align: center;
+    font-weight: 100;
+    margin-top: 1vh;
+}
+
 #options-container{
     flex-direction: column;
     justify-content: flex-start;
@@ -128,4 +145,17 @@ h1{
     height: auto;
     margin-left: 40vw;
     margin-right: 20vw;
+}
+
+#actions{
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15vh;
+}
+.action-card{
+    margin-bottom: 7.5vh;
+    width: 50%;
+    padding: 10%;
+    font-size: 5vw;
+    border-radius: 30px;
 }
