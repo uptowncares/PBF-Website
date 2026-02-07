@@ -1,5 +1,6 @@
 :root{
     --border: rgba(255, 0, 0, 1);
+    --footer-elements-margin: 3vh;
 }
 
 body{
@@ -159,3 +160,20 @@ h2{
     font-size: 5vw;
     border-radius: 30px;
 }
+
+footer{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin-bottom: 0vh !important;
+}
+footer > *{
+    justify-content: space-evenly !important;
+    width: 90% !important;
+    margin-top: var(--footer-elements-margin);
+    margin-top: var(--footer-elements-margin);
+}
+
+footer > * > *{
+    font-size: 5vw;
+}
+
