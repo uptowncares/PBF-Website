@@ -1,6 +1,7 @@
 :root{
     --border: rgba(255, 0, 0, 1);
     --footer-elements-margin: 3vh;
+    --grandchild-media-dimensions: 70vw;
 }
 
 body{
@@ -78,28 +79,45 @@ header > *{
     max-width: 55%;
 }
 
-.right-offset-child{
+.offset-child{
     border: 2px solid var(--border);
     border-radius: 10%;
     height: auto;
     width: auto;
     background-color: grey;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
     position: relative;
-    left: 20%;
     padding-top: 3vh;
     padding-bottom: 3vh;
+
 }
 
-.left-offset-media{
+.right-offset-child{
+    justify-content: flex-start;
+    left: 20%;
+}
+
+.left-offset-child{
+    justify-content: flex-end;
+    right: 20%;
+}
+
+.offset-content-grandchild{
     border: 2px solid var(--border);
     border-radius: 10%;
-    height: 70vw;
-    width: 70vw;
+    height: var(--grandchild-media-dimensions);
+    width: var(--grandchild-media-dimensions);
+}
+
+.left-offset-grandchild{
     margin-right: 40vw;
     margin-left: 5vw;
+}
+
+.right-offset-grandchild{
+    margin-left: 40vw;
+    margin-right: 5vw;
 }
 
 h1{
@@ -153,6 +171,7 @@ h2{
     width: 100%;
     margin-top: 15vh;
 }
+
 .action-card{
     margin-bottom: 7.5vh;
     width: 50%;
@@ -160,6 +179,39 @@ h2{
     font-size: 5vw;
     border-radius: 30px;
 }
+
+#programs > * > *{
+    margin-bottom: 0vh;
+    height: auto;
+
+}
+
+.program-media{
+    border: 2px solid blue;
+
+    height: 20vw;
+    width: 40vw;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 footer{
     padding-top: 3vh;
