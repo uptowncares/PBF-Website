@@ -1,7 +1,10 @@
 :root{
-    --border: rgba(255, 0, 0, 1);
+    --border: rgba(255, 0, 0, 0);
+    --media-outline: rgba(0, 0, 255, 1);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
+    --program-content-max-width: 75vw;
+    --media-border-radius: 30px;
 }
 
 body{
@@ -52,6 +55,11 @@ header > *{
     width: 6vh;
 }
 
+.media{
+    border: 2px solid var(--media-outline) !important;
+    border-radius: var(--media-border-radius) !important;
+}
+
 .content-parent{
     display: flex;
     justify-content: center;
@@ -81,7 +89,7 @@ header > *{
 
 .offset-child{
     border: 2px solid var(--border);
-    border-radius: 10%;
+    border-radius: 60px;
     height: auto;
     width: auto;
     background-color: grey;
@@ -105,7 +113,6 @@ header > *{
 
 .offset-content-grandchild{
     border: 2px solid var(--border);
-    border-radius: 10%;
     height: var(--grandchild-media-dimensions);
     width: var(--grandchild-media-dimensions);
 }
@@ -173,6 +180,7 @@ h2{
 }
 
 .action-card{
+    background-color: grey;
     margin-bottom: 7.5vh;
     width: 50%;
     padding: 10%;
@@ -180,19 +188,81 @@ h2{
     border-radius: 30px;
 }
 
+
+
+
+#programs{
+    flex-direction: column;
+}
+
+
+#programs > *{
+    margin-bottom: 4vh;
+}
+
+
+
 #programs > * > *{
     margin-bottom: 0vh;
     height: auto;
+    width: auto !important;
 
+
+}
+#programs > * > * > *{
+    max-width: 80vw !important;
 }
 
 .program-media{
-    border: 2px solid blue;
-
-    height: 20vw;
-    width: 40vw;
-
+    height: 45vw;
+    width: 80vw;
 }
+
+.program-title-container{
+    border: 2px solid var(--border);
+    height: auto !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.program-title-container-right{
+    justify-content: flex-end;
+}
+.program-title-container-left{
+    justify-content: flex-start;
+}
+
+.program-title-container > p{
+    overflow-x: hidden;
+    font-size: 8vw;
+    font-weight: 100;
+}
+
+.program-action-bar{
+    height: auto !important;
+    width: 100%;
+    border: 2px solid var(--border);
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.program-action-bar-right{
+    justify-content: flex-end;
+}
+.program-action-bar-left{
+    justify-content: flex-start;
+}
+
+
+
+.program-action-bar a{
+    font-size: 6vw;
+}
+
+
 
 
 
@@ -214,6 +284,7 @@ h2{
 
 
 footer{
+    background-color: grey;
     padding-top: 3vh;
     padding-bottom: 3vh;
     margin-bottom: 0vh !important;
