@@ -10,9 +10,11 @@ app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
 
 app.get('/', (req, res) => {
-    console.log(__dirname);
     res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/index.html'));
-    
+});
+
+app.get('/about', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/about.html'));
 });
 
 
