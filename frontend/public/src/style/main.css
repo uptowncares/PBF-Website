@@ -1,5 +1,5 @@
 :root{
-    --border: rgba(255, 0, 0, 0);
+    --border: rgba(255, 0, 0, 1);
     --media-outline: rgba(0, 0, 255, 1);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
@@ -25,10 +25,44 @@ header{
     height: auto;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 4vh;
 }
+
+
+#logo-container{
+    margin-bottom: 0vh !important;
+}
+
+#logo-image{
+    border: 2px solid var(--border);
+
+    height: 14vw;
+    width: 14vw;
+}
+
+#logo-text-parent{
+    margin-bottom: 0vh !important;
+}
+
+#logo-text-parent > *{
+    max-width: 100% !important;
+    align-self: flex-start;
+}
+
+#logo-text-top{
+    height: auto;
+    width: auto;
+    font-size: 6vw;
+    border: 2px solid var(--border);
+}
+
+#logo-text-bttm{
+    font-size: 6vw;
+    border: 2px solid var(--border);
+}
+
 
 header > *{
     max-height: 12vh;
@@ -51,8 +85,8 @@ header > *{
     background-position: center;
     background-size: contain;
     border: 2px solid var(--border);
-    height: 6vh;
-    width: 6vh;
+    height: 13vw;
+    width: 13vw;
 }
 
 .media{
