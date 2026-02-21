@@ -7,6 +7,18 @@
     --media-border-radius: 30px;
 }
 
+
+#sponsors::-webkit-scrollbar{
+    width: 40px;
+}
+
+
+#sponsors::-webkit-scrollbar-thumb{
+    background-color: purple;
+}
+
+
+
 body{
     margin: 0px;
 }
@@ -376,6 +388,30 @@ footer > * > *{
 
 .show-subtext-more-info{
     height: auto !important;
+}
+
+#sponsors{
+    max-height: 40vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-items: flex-start;
+}
+
+#sponsors div{
+    max-width: none;
+}
+
+#sponsors > div > div{
+    margin-bottom: 3vh;
+}
+
+
+
+.sponsor{
+    height: 40vw;
+    width: 70vw;
+    border: 2px solid blue;
+
 }
 
 
