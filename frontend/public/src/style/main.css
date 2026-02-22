@@ -1,5 +1,5 @@
 :root{
-    --border: rgba(255, 0, 0, 1);
+    --border: rgba(255, 0, 0, 0);
     --media-outline: rgba(0, 0, 255, 1);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
@@ -318,6 +318,11 @@ h3{
 }
 
 
+#contact-form{
+    margin-bottom: 0vh;
+}
+
+
 #contact-form div{
     max-width: none;
     width: 100%;
@@ -337,12 +342,40 @@ h3{
 }
 
 #contact-form input{
-    font-size: 4vw;
+    font-size: 5vw;
     width: 100%;
+}
+
+input{
+    border-radius: 10px;
 }
 
 #contact-form form{
     min-width: 80vw;
+}
+
+#contact-form form > div{
+    margin-bottom: 4vh;
+    align-items: self-start;
+}
+
+textarea{
+    width: 100%;
+    border-radius: 10px;
+    font-size: 4vw;
+}
+
+#submit-container{
+    margin-top: 7vh;
+    height: auto;
+    width: 100%;
+    margin-bottom: 0vh;
+}
+
+#submit-container > button{
+    border-radius: 10px;
+    font-size: 6vw;
+    width: 100%;
 }
 
 footer{
@@ -360,6 +393,10 @@ footer > *{
 
 footer > * > *{
     font-size: 5vw;
+}
+
+button{
+    border: 2px solid var(--border);
 }
 
 #socials-container{
@@ -482,6 +519,9 @@ footer > * > *{
     width: 15vw;
     border: 2px solid var(--border);
 }
+
+
+
 
 
 
