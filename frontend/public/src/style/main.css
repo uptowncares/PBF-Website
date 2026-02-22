@@ -18,7 +18,6 @@
 }
 
 
-
 body{
     margin: 0px;
 }
@@ -64,7 +63,7 @@ header{
 }
 
 #logo-text-parent > *{
-    max-width: 100% !important;
+    max-width: none !important;
     align-self: flex-start;
 }
 
@@ -179,6 +178,7 @@ header > *{
 }
 
 h1{
+    text-align: center;
     border: 2px solid var(--border);
     margin-left: 5vw;
     font-size: 10vw;
@@ -190,6 +190,18 @@ h2{
     text-align: center;
     font-weight: 100;
     margin-top: 1vh;
+}
+
+h3{
+    border: 2px solid var(--border);
+    font-size: 6vw;
+    font-weight: lighter;
+}
+
+
+
+.about-title{
+    margin-left: 0vw;
 }
 
 #options-container{
@@ -401,17 +413,46 @@ footer > * > *{
     max-width: none;
 }
 
+#sponsors > div{
+    margin-bottom: 0vh !important;
+}
+
 #sponsors > div > div{
     margin-bottom: 3vh;
 }
-
-
 
 .sponsor{
     height: 40vw;
     width: 70vw;
     border: 2px solid blue;
 
+}
+
+.portrait-media{
+    height: 80vw;
+    width: 65vw;
+    border: 2px solid blue;
+}
+
+.subtext-about-founder{
+    overflow: hidden;
+    font-size: 6vw;
+    border: 2px solid var(--border);
+    transition: height 0.5s ease-in-out;
+}
+
+#about-founder > div > div{
+    max-width: none;
+}
+
+#about-founder h2{
+    white-space: nowrap;
+}
+
+.toggle-control-founder{
+    height: 15vw;
+    width: 15vw;
+    border: 2px solid var(--border);
 }
 
 
