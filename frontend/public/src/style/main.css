@@ -317,6 +317,34 @@ h3{
     font-size: 6vw;
 }
 
+
+#contact-form div{
+    max-width: none;
+    width: 100%;
+}
+
+.input-label{
+    font-size: 3vw;
+    justify-content: flex-start;
+}
+
+.instruction-text-form{
+    border: 2px solid var(--border);
+    min-width: 80vw;
+    font-size: 4vw;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+#contact-form input{
+    font-size: 4vw;
+    width: 100%;
+}
+
+#contact-form form{
+    min-width: 80vw;
+}
+
 footer{
     background-color: grey;
     padding-top: 3vh;
