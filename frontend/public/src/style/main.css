@@ -79,7 +79,6 @@ header{
     border: 2px solid var(--border);
 }
 
-
 header > *{
     max-height: 12vh;
     margin: 4vw;
@@ -356,7 +355,7 @@ h3{
 }
 
 .input-label{
-    font-size: 3vw;
+    font-size: 4vw;
     justify-content: flex-start;
 }
 
@@ -565,3 +564,8 @@ button{
     width: 70vw;
 }
 
+
+#legal h2{
+    max-width: 90%;
+    font-size: 4vw;
+}
