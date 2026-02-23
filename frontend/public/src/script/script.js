@@ -15,6 +15,7 @@ const toggle_about_founder_functionality = function(){
     buttons.forEach((button) => {
         button.addEventListener('click', (event) => {
             const text = event.target.parentNode.parentNode.children[2];
+            event.target.classList.toggle("toggle-show");
             if(text.style.height == '0px' || !(text.style.height)){
                 text.style.height = text.scrollHeight + 'px';
             } 
@@ -31,6 +32,7 @@ const toggle_more_info_functionality = function(){
     buttons.forEach((button) => {
         button.addEventListener('click', (event) => {
             const text = event.target.parentNode.parentNode.children[1];
+            event.target.classList.toggle("toggle-show");
             if(text.style.height == '0px' || !(text.style.height)){
                 text.style.height = text.scrollHeight + 'px';
             } 

@@ -5,6 +5,7 @@
     --grandchild-media-dimensions: 70vw;
     --program-content-max-width: 75vw;
     --media-border-radius: 30px;
+    --toggle-transform-speed: 0.5s;
 
     --magenta: rgba(231, 22, 197, 1);
     --blueish: rgba(79, 43, 255, 1);
@@ -23,6 +24,10 @@
 
 #sponsors::-webkit-scrollbar-thumb{
     background-color: purple;
+}
+
+.class{
+    background-color:;
 }
 
 
@@ -70,9 +75,12 @@ header{
 
 #logo-image{
     border: 2px solid var(--border);
-
     height: 14vw;
     width: 14vw;
+    background-image: url("../../media/pbf-logo-white-518x500-1\ \(1\).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 #logo-text-parent{
@@ -480,6 +488,10 @@ button{
     margin-bottom: 3vh;
 }
 
+.more-info > div > div{
+    margin-right: 10vw;
+}
+
 
 .more-info div{
     max-width: none !important;
@@ -506,11 +518,17 @@ button{
 }
 
 .toggle-control{
-    height: 20vw;
-    width: 20vw;
-    border: 2px solid var(--border);
+    height: 15vw;
+    width: 15vw;
+    transform: rotate(180deg);
+    transition: transform var(--toggle-transform-speed) ease-in-out;
+    background-image: url("../../icons/icons8-arrow-100.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 
 }
+
 
 .subtext-more-info{
     text-align: center;
@@ -575,8 +593,18 @@ button{
 .toggle-control-founder{
     height: 15vw;
     width: 15vw;
-    border: 2px solid var(--border);
+    transform: rotate(180deg);
+    transition: transform var(--toggle-transform-speed) ease-in-out;
+    background-image: url("../../icons/icons8-arrow-100.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
+
+.toggle-show{
+    transform: rotate(90deg);
+}
+
 
 .unrestricted-column div{
     max-width: none;
