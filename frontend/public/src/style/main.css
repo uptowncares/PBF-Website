@@ -110,6 +110,10 @@ header > *{
     border-radius: var(--media-border-radius) !important;
 }
 
+.stacked-media{
+    margin-bottom: 2vh !important;
+}
+
 .content-parent{
     display: flex;
     justify-content: center;
@@ -184,6 +188,10 @@ h1{
     font-size: 10vw;
 }
 
+.home-header{
+    text-align: left;
+}
+
 h2{
     border: 2px solid var(--border);
     font-size: 7vw;
@@ -217,7 +225,7 @@ h3{
     background-color: grey;
     padding-top: 4vh;
     border-radius: 50px;
-    transition: left 1s ease-in-out;
+    transition: left 0.75s ease-in-out;
 }
 
 .show-menu{
@@ -539,43 +547,21 @@ button{
     border: 2px solid var(--border);
 }
 
-
-
-#donation-programs div{
+.unrestricted-column div{
     max-width: none;
 }
 
-#donation-programs > div{
+.unrestricted-column > div{
     margin-bottom: 4vh;
 }
 
-#donation-programs > div > div{
+.unrestricted-column > div > div{
     height: auto;
     width: auto;
 
 }
-
-
-.program-list div{
-    max-width: none;
-}
-
-.program-list > div{
-    margin-bottom: 4vh;
-}
-
-.program-list > div > div{
-    height: auto;
-    width: auto;
-}
-
 
 .text-only{
     width: 70vw;
 }
-
-
-
-
-
 
