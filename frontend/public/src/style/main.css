@@ -1,5 +1,5 @@
 :root{
-    --border: rgba(255, 0, 0, 0);
+    --border: rgba(255, 0, 0, 1);
     --media-outline: rgba(0, 0, 255, 1);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
@@ -325,6 +325,11 @@ h3{
 
 #contact-form div{
     max-width: none;
+    width: 100%;
+}
+
+#contact-form select{
+    font-size: 5vw;
     width: 100%;
 }
 
