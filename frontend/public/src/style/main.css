@@ -1,10 +1,18 @@
 :root{
-    --border: rgba(255, 0, 0, 1);
+    --border: rgba(255, 0, 0, 0);
     --media-outline: rgba(0, 0, 255, 1);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
     --program-content-max-width: 75vw;
     --media-border-radius: 30px;
+
+    --magenta: rgba(231, 22, 197, 1);
+    --blueish: rgba(79, 43, 255, 1);
+    --cyanish: rgba(13, 204, 255, 1);
+
+    --main-color: var(--cyanish);
+    --main-alt: var(--blueish);
+    --main-alt-2: var(--magenta);
 }
 
 
@@ -20,6 +28,8 @@
 
 body{
     margin: 0px;
+    background-color: var(--main-color);
+
 }
 
 html, body{
@@ -43,8 +53,15 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
+    background-color: var(--main-color);
+
+    position: sticky;
+    top: 0%;
+    z-index: 10;
 }
+
+
 
 
 #logo-container{
@@ -145,7 +162,7 @@ header > *{
     border-radius: 60px;
     height: auto;
     width: auto;
-    background-color: grey;
+    background-color: var(--main-alt);
     display: flex;
     align-items: center;
     position: relative;
@@ -207,6 +224,7 @@ h3{
 
 
 
+
 .about-title{
     margin-left: 0vw;
 }
@@ -221,7 +239,7 @@ h3{
     top: 5%;
     height: 90vh;
     border: 2px solid var(--border);
-    background-color: grey;
+    background-color: var(--main-alt);
     padding-top: 4vh;
     border-radius: 50px;
     transition: left 0.75s ease-in-out;
@@ -250,7 +268,7 @@ h3{
 }
 
 .action-card{
-    background-color: grey;
+    background-color: var(--main-alt-2);
     margin-bottom: 7.5vh;
     width: 50%;
     padding: 10%;
@@ -314,7 +332,7 @@ h3{
 }
 
 .program-action-bar > div{
-    background-color: red;
+    background-color: var(--main-alt-2);
     border-radius: 10px;
     padding-left: 2vw;
     padding-right: 2vw;
@@ -405,7 +423,7 @@ textarea{
 }
 
 footer{
-    background-color: grey;
+    background-color: var(--main-alt);
     padding-top: 3vh;
     padding-bottom: 3vh;
     margin-bottom: 0vh !important;
@@ -419,6 +437,10 @@ footer > *{
 
 footer > * > *{
     font-size: 5vw;
+}
+
+footer h4{
+    font-size: 6vw;
 }
 
 button{
@@ -439,6 +461,16 @@ button{
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+#insta{
+    background-image: url("../../icons/icons8-instagram-logo-100.png");
+}
+#facebook{
+    background-image: url("../../icons/icons8-facebook-logo-100.png");
+}
+#twitter{
+    background-image: url("../../icons/icons8-x-logo-100.png");
 }
 
 
