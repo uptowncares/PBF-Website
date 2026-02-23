@@ -306,6 +306,20 @@ h3{
     align-items: center;
 }
 
+.program-action-bar > div{
+    background-color: red;
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+.program-action-bar-left > div{
+    margin-left: 1vw;
+}
+.program-action-bar-right > div{
+    margin-right: 1vw;
+}
+
 .program-action-bar-right{
     justify-content: flex-end;
 }
@@ -524,6 +538,23 @@ button{
     width: 15vw;
     border: 2px solid var(--border);
 }
+
+
+
+#donation-programs div{
+    max-width: none;
+}
+
+#donation-programs > div{
+    margin-bottom: 4vh;
+}
+
+#donation-programs > div > div{
+    height: auto;
+    width: auto;
+
+}
+
 
 
 
