@@ -556,6 +556,24 @@ button{
 }
 
 
+.program-list div{
+    max-width: none;
+}
+
+.program-list > div{
+    margin-bottom: 4vh;
+}
+
+.program-list > div > div{
+    height: auto;
+    width: auto;
+}
+
+
+.text-only{
+    width: 70vw;
+}
+
 
 
 
