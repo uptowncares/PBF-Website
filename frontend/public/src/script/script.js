@@ -6,6 +6,21 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle_more_info_functionality();
     toggle_about_founder_functionality();
 
+
+    Array.from(document.getElementsByClassName('donation')).forEach((button) => {
+        button.addEventListener("click", () => {
+            window.alert("Sorry, we are not able to accept donations yet. Please check back later");
+        })
+    })
+
+    document.getElementById('submit-volunteer').addEventListener("click", () =>{
+        window.alert("Sorry, we are not able to accept volunteers yet. Please check back later")
+    });
+
+    document.getElementById('submit-contact').addEventListener("click", () =>{
+        window.alert("Sorry, we are not able to process your request yet. Please check back later")
+    });
+
 });
 
 
