@@ -1,25 +1,42 @@
+// imports
 const express = require('express');
-const { model } = require('mongoose');
 const path = require('path');
 
-
+// constants
 const app = express();
 const PORT = 3000;
 
-
-
+// middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
 
-
+// page routing
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/index.html'));
 });
 app.get('/about', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/about.html'));
 });
+app.get('/contact', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/contact.html'));
+});
+app.get('/donate', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/donate.html'));
+});
+app.get('/gallery', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/gallery.html'));
+});
+app.get('/more-info', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/more-info.html'));
+});
+app.get('/programs', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/programs.html'));
+});
+app.get('/volunteer', (req, res) => {
+    res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/volunteer.html'));
+});
 
-
+// services
 app.post('/contact-us', (req, res) => {
     if(req.body["name"] && req.body["email"] && req.body["subject"] && req.body["message"]){
         const name = req.body["name"];
@@ -44,7 +61,7 @@ app.post('/contact-us', (req, res) => {
 
 });
 
-
+// express port binding
 app.listen(PORT, () => {
     console.log("server listening on port", PORT);
 });
