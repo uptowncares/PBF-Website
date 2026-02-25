@@ -1,3 +1,7 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
 :root{
     --border: rgba(255, 0, 0, 0);
     --media-outline: rgba(255, 0, 0, 1);
@@ -12,7 +16,7 @@
     --lighter-blusih: rgb(140, 118, 252);
     --cyanish: rgba(13, 204, 255, 1);
 
-    --main-color: var(--cyanish);
+    --main-color: white;
     --main-alt: var(--blueish);
     --main-alt-2: var(--magenta);
     --main-alt-3: var(--lighter-blusih);
@@ -30,19 +34,23 @@
 }
 
 
+*{
+    font-family: "";
+    -webkit-tap-highlight-color: transparent;
+}
+
 body{
+    min-height: 100vh;
     margin: 0px;
     background-color: var(--main-color);
-
 }
 
 html, body{
-    
     height: 100%;
     width: 100%;
     overflow-x: hidden;
-
 }
+
 
 a{
     text-decoration: none;
@@ -126,6 +134,10 @@ header > *{
     border: 2px solid var(--border);
     height: 13vw;
     width: 13vw;
+}
+
+#menu-button:active{
+    filter: invert(1);
 }
 
 @media(min-width: 1100px){
@@ -334,6 +346,11 @@ h3{
     padding: 10%;
     font-size: 5vw;
     border-radius: 30px;
+    transition: height 1s ease-in-out;
+}
+
+.action-card-expanded{
+    height: 30vw;
 }
 
 @media(min-width: 1100px){
@@ -391,6 +408,18 @@ h3{
     overflow-x: hidden;
     font-size: 8vw;
     font-weight: 100;
+}
+
+.program-action{
+    cursor: pointer;
+}
+
+.program-action:active{
+    filter: brightness(75%);
+}
+
+.action-card:active{
+    filter: brightness(75%);
 }
 
 .program-action-bar{
@@ -750,6 +779,15 @@ button{
 #legal h2{
     max-width: 90%;
     font-size: 4vw;
+}
+
+
+.boundary{
+    height: 0px;
+    width: 100vw;
+    border: 2px solid red;
+    position: fixed;
+    top: 50%;
 }
 
 @media(min-width: 1100px){
