@@ -667,6 +667,13 @@ button:active{
 
 .more-info > div > div{
     margin-right: 10vw;
+
+}
+
+.more-info > div > div:first-child{
+    padding: 2%;
+    border: 3px solid black;
+    border-radius: 20px;
 }
 
 
@@ -675,12 +682,20 @@ button:active{
 }
 
 .icon-more-info{
-
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 20vw;
     width: 20vw;
     border: 2px solid var(--border);
+}
 
+#email-icon{
+    background-image: url('../../icons/icons8-mail-100.png');
+}
 
+#socials-icon{
+    background-image: url('../../icons/icons8-social-100.png');
 }
 
 .heading-text-more-info{
