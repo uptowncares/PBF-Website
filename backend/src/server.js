@@ -15,7 +15,6 @@ app.use(express.static(path.join(__dirname, '../../frontend/public')));
 app.get('/', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/index.html'));
 });
-
 app.get('/about', (req, res) => {
     res.status(200).sendFile(path.join(__dirname, '../../frontend/public/src/about.html'));
 });
@@ -30,13 +29,13 @@ app.post('/contact-us', (req, res) => {
         try{
             //const result = model.add_new_contact(name, email, subject, mssg);
             if(result){
-                res.status(200).json("success");
+                res.status(201).json("success");
                 return;
             }
-            res.status(500).json({"error": "server issue adding that message"});
+            res.status(500).json({"error": "model issue adding that message"});
         }catch(error){
             console.log(error);
-            res.status(500).json({"error": "server issue adding that message"});
+            res.status(501).json({"error": "server issue communicating to the model"});
         }
         return;
     }
