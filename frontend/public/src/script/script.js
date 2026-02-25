@@ -5,21 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle_menu_functionality();
     toggle_more_info_functionality();
     toggle_about_founder_functionality();
-    //process_contact_request();
     //process_volunteer();
 
 
 
 
 });
-
-const process_contact_request = function(){
-
-    document.getElementById('submit-contact').addEventListener("click", () =>{
-        window.alert("Sorry, we are not able to process your request yet. Please check back later")
-    });
-
-}
 
 
 const process_volunteer = function(){

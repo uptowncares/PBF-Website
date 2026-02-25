@@ -1,6 +1,8 @@
 // imports
 const express = require('express');
 const path = require('path');
+const model = require('./model.js');
+const cors = require('cors');
 
 // constants
 const app = express();
@@ -9,6 +11,15 @@ const PORT = 3000;
 // middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
+app.use(cors({
+    origin: function (origin, callback) {
+    if (!origin || origin === 'null') {
+        callback(null, true);
+    } else {
+        callback(null, true);
+    }
+    }
+}));
 
 // page routing
 app.get('/', (req, res) => {
@@ -37,14 +48,14 @@ app.get('/volunteer', (req, res) => {
 });
 
 // services
-app.post('/contact-us', (req, res) => {
+app.post('/contact-us', async(req, res) => {
     if(req.body["name"] && req.body["email"] && req.body["subject"] && req.body["message"]){
         const name = req.body["name"];
         const email = req.body["email"];
         const subject = req.body["subject"];
         const mssg = req.body["message"];
         try{
-            //const result = model.add_new_contact(name, email, subject, mssg);
+            const result = await model.add_new_contact(name, email, subject, mssg);
             if(result){
                 res.status(201).json("success");
                 return;
@@ -52,7 +63,7 @@ app.post('/contact-us', (req, res) => {
             res.status(500).json({"error": "model issue adding that message"});
         }catch(error){
             console.log(error);
-            res.status(501).json({"error": "server issue communicating to the model"});
+            res.status(500).json({"error": "server issue communicating to the model"});
         }
         return;
     }
