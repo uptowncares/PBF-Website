@@ -784,6 +784,7 @@ button:active{
 }
 
 #about-founder h2{
+    font-weight: normal;
     white-space: nowrap;
 }
 
