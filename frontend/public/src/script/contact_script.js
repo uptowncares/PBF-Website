@@ -15,17 +15,28 @@ const process_contact_request = function(event){
     event.preventDefault();
     const inputs = Array.from(document.getElementsByTagName('input'));
     const textarea = Array.from(document.getElementsByTagName('textarea'))[0];
-    for(let i = 0; i < inputs.length; i++){
-        if(inputs[i].value == "" || textarea.value == ""){
-            window.alert("Please fill out the entire form");
+    let invalidForm = false;
+    if(textarea.value == "") invalidForm = true;
+    if(!invalidForm){
+        for(let i = 0; i < inputs.length; i++){
+            if(inputs[i].value == ""){
+                invalidForm = true;
+                break;
+            }
+        }
+        if(!invalidForm){
+            const name = inputs[0].value;
+            const email = inputs[1].value;
+            const subject = inputs[2].value;
+            const message = textarea.value;
+            send_contact_request(name, email, subject, message, inputs, textarea);
             return;
         }
+        window.alert("Please fill out the entire form");
+        return;
     }
-    const name = inputs[0].value;
-    const email = inputs[1].value;
-    const subject = inputs[2].value;
-    const message = textarea.value;
-    send_contact_request(name, email, subject, message, inputs, textarea);
+    window.alert("Please add a message to the contact form");
+    return;
 }
 
 const clear_contact_form = function(inputs, textarea){
@@ -56,7 +67,7 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
                 window.alert("There was an issue with that request, please try again.");
                 break;
             case 500:
-                window.alert("There was an issue with the server on that request, please try again");
+                window.alert("The server had an issue processing that request, please try again");
                 break;
             default:
                 window.alert("There has been an unexpected issue, please try again");
@@ -64,6 +75,6 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
         }
     }catch(error){
         console.log(error);
-        window.alert("There was an issue sending that request, please try again.");
+        window.alert("There was a network issue sending that request, please try again.");
     }
 }
