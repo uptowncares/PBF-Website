@@ -17,6 +17,7 @@
     --blueish: rgba(79, 43, 255, 1);
     --lighter-blusih: rgb(140, 118, 252);
     --cyanish: rgba(13, 204, 255, 1);
+    --dark-purple: rgba(44, 6, 79, 1);
 
     --main-color: white;
     --main-alt: var(--blueish);
@@ -98,6 +99,7 @@ header{
 #logo-text-parent > *{
     max-width: none !important;
     align-self: flex-start;
+    color: var(--dark-purple);
 }
 
 #logo-text-top{
@@ -245,6 +247,7 @@ h1{
     margin-left: 5vw;
     font-size: 10vw;
     font-weight: 700;
+    color: var(--dark-purple);
 }
 
 .home-header{
@@ -257,6 +260,8 @@ h2{
     text-align: center;
     font-weight: 300;
     margin-top: 1vh;
+    color: var(--dark-purple);
+
 }
 
 h3{
