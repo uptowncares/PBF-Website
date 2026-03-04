@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const contact_functionality = function(){
+
+    dismiss_notification_functionality();
     const form = Array.from(document.getElementsByName('contact-form'))[0];
     form.addEventListener("submit", (event) => process_contact_request(event));
 }
@@ -32,10 +34,10 @@ const process_contact_request = function(event){
             send_contact_request(name, email, subject, message, inputs, textarea);
             return;
         }
-        window.alert("Please fill out the entire form");
+        system_notification("Please fill out the entire form", "", true);
         return;
     }
-    window.alert("Please add a message to the contact form");
+    system_notification("Please add a message to the contact form", "", true);
     return;
 }
 
@@ -76,5 +78,33 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
     }catch(error){
         console.log(error);
         window.alert("There was a network issue sending that request, please try again.");
+    }
+}
+
+const dismiss_notification_functionality = function(){
+    const button = document.getElementById('notification-confirmation');
+    button.addEventListener('click', () => system_notification("", "", false));
+}
+
+
+const populate_notification_text = function(parent, h1, h2){
+    const title = parent.children[0];
+    title.textContent = h1;
+    const subtitle = parent.children[1];
+    subtitle.textContent = h2;
+}
+
+
+const system_notification = function(h1, h2, boolean){
+    const backdrop = document.getElementById('backdrop');
+    const notification = document.getElementById('notification-modal');
+    if(boolean){
+        backdrop.classList.add('show-backdrop');
+        notification.classList.add('show-notification');
+        populate_notification_text(notification, h1, h2);
+    }
+    else{
+        notification.classList.remove('show-notification');
+        backdrop.classList.remove('show-backdrop');
     }
 }
