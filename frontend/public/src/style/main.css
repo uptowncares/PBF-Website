@@ -4,7 +4,7 @@
 
 :root{
     --border: rgba(255, 0, 0, 0);
-    --media-outline: rgba(0, 0, 255, 1);
+    --media-outline: var(--main-alt-3);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
     --program-content-max-width: 75vw;
@@ -166,7 +166,7 @@ header > *{
 }
 
 .media{
-    border: 2px solid var(--media-outline) !important;
+    border: 5px solid var(--media-outline) !important;
     border-radius: var(--media-border-radius) !important;
 }
 
@@ -393,6 +393,9 @@ h3{
 }
 
 .program-media{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 45vw;
     width: 80vw;
 }
@@ -765,9 +768,13 @@ button:active{
 }
 
 .sponsor{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     height: 40vw;
     width: 70vw;
-    border: 2px solid red;
+    border: 5px solid var(--main-color);
+    border-radius: 20px;
 
 }
 
@@ -949,3 +956,70 @@ button:active{
 
     visibility: visible !important;
 }
+
+#home-slideshow > div > div:first-child{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('../../media/Photo\ Nov\ 20\,\ 2\ 17\ 34\ AM\ \(1\).jpg');
+}
+
+
+#programs > div:nth-child(1) > div:first-child > div:first-child{
+    background-image: url('../../media/serve-a-soul.jpg');
+}
+
+#programs > div:nth-child(2) > div:first-child > div:first-child{
+    background-image: url('../../media/a-creative-wonderland.jpg');
+}
+
+#welcome > div > div:first-child{
+    background-image: url('../../media/welcome-2.jpg');
+}
+
+
+.sponsor:nth-child(1){
+    background-image: url('../../media/sponsor-shaq.png');
+}
+
+.sponsor:nth-child(2){
+    background-image: url('../../media/sponsor-all-in-one.png');
+}
+
+.sponsor:nth-child(3){
+    background-image: url('../../media/sponsor-freebeat.png');
+}
+
+.sponsor:nth-child(4){
+    background-image: url('../../media/sponsor-la-care.JPG');
+}
+
+
+#tuesday-feeding-image{
+    background-image: url('../../media/tuesday-feeding.JPG');
+}
+
+#encouragment-image{
+    background-image: url('../../media/encouragment.jpg');
+}
+
+#creative-wonderland-image{
+    background-image: url('../../media/a-creative-wonderland.jpg');
+}
+
+#donations > div:nth-child(2) > div:first-child > div:first-child{
+    background-image: url('../../media/PBF\ Vector.png');
+    background-size: contain;
+    background-color: var(--main-color);
+}
+
+#donations > div > div:first-child{
+    margin-bottom: 0vh;
+}
+
+
+
+.stacked-media:nth-of-type(1){
+    background-image: url('../../media/gallery-baseball-1.jpg');
+}
+
