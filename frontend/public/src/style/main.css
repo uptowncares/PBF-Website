@@ -569,7 +569,7 @@ select{
 }
 
 footer{
-    background-color: var(--main-alt);
+    background-color: var(--cyanish);
     padding-top: 3vh;
     padding-bottom: 3vh;
     margin-bottom: 0vh !important;
@@ -1007,6 +1007,7 @@ button:active{
     background-image: url('../../media/a-creative-wonderland.jpg');
 }
 
+
 #donations > div:nth-child(2) > div:first-child > div:first-child{
     background-image: url('../../media/PBF\ Vector.png');
     background-size: contain;
@@ -1016,7 +1017,6 @@ button:active{
 #donations > div > div:first-child{
     margin-bottom: 0vh;
 }
-
 
 
 .stacked-media:nth-of-type(1){
