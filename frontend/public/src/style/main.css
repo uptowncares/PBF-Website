@@ -330,7 +330,7 @@ h3{
 }
 
 #options-container *{
-    font-size: 10vw;
+    font-size: 7vw;
 }
 
 .floating-container{
@@ -365,13 +365,14 @@ h3{
     .action-card{
         font-size: 2vw;
         padding: 2%;
+        transition: font-size 0.25s ease-in-out, width 0.25s ease-in-out;
     }
-
+    #actions > .action-card:hover{
+        font-size: 4vw;
+        width: 70%;
+        color: var(--main-color);
+    }
 }
-
-
-
-
 
 #programs{
     flex-direction: column;
@@ -423,6 +424,10 @@ h3{
 
 .program-action{
     cursor: pointer;
+}
+
+.program-action:hover{
+    color: var(--main-color);
 }
 
 .program-action:active{
@@ -640,7 +645,6 @@ button:active{
 @media(min-width: 1100px){
     footer > * > *{
         font-size: 2vw;
-
     }
     footer h4{
         font-size: 2.5vw;
@@ -649,10 +653,15 @@ button:active{
         height: 5vw;
         width: 5vw;
     }
-    #options-container{
+    #options-container a{
+        transition: font-size 0.25s ease-in-out;
     }
     #options-container *{
+        font-size: 2vw;
+    }
+    #options-container a:hover{
         font-size: 4vw;
+        color: var(--main-color);
     }
     .floating-container{
         margin-left: 20vw;
@@ -668,6 +677,7 @@ button:active{
     .program-action-bar a{
         font-size: 2vw;
     }
+
 
 }
 
@@ -1022,4 +1032,23 @@ button:active{
 .stacked-media:nth-of-type(1){
     background-image: url('../../media/gallery-baseball-1.jpg');
 }
+
+
+@media(min-width: 1100px){
+    #desktop-auxilary{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #desktop-auxilary > div:nth-child(1){
+        position: relative;
+        left: 30%;
+    }
+    #desktop-auxilary > div:nth-child(2){
+        position: relative;
+        left: -60%;
+    }
+}
+
 
