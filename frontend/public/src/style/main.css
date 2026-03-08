@@ -677,8 +677,10 @@ button:active{
     .program-action-bar a{
         font-size: 2vw;
     }
+}
 
-
+.more-info * {
+    color: var(--main-color);
 }
 
 
@@ -695,7 +697,7 @@ button:active{
 
 .more-info > div > div:first-child{
     padding: 2%;
-    border: 5px solid black;
+    border: 5px solid var(--main-color);
     border-radius: 20px;
 }
 
@@ -758,6 +760,35 @@ button:active{
     height: auto !important;
 }
 
+
+
+@media(min-width: 1100px){
+    .icon-more-info{
+        height: 5vw;
+        width: 5vw;
+    }
+    .heading-text-more-info{
+        min-height: 0vh;
+        width: 30vw;
+        font-size: 1.5vw;
+    }
+    .toggle-control{
+        cursor: pointer;
+        height: 2.5vw;
+        width: 2.5vw;
+    }
+    .more-info > div > div{
+        margin-right: 2.5vw;
+    }
+    .subtext-more-info{
+        max-width: 15.5vw !important;
+        font-size: 1.5vw;
+    }
+    .more-info > div{
+        margin-left: 50vw;
+    }
+}
+
 #sponsors{
     max-height: 40vh;
     overflow-y: scroll;
@@ -785,6 +816,17 @@ button:active{
     width: 70vw;
     border: 5px solid var(--main-color);
     border-radius: 20px;
+
+}
+
+@media(min-width: 1100px){
+    #sponsors{
+        max-height: 60vh;
+    }
+    .sponsor{
+        height: 20vw;
+        width: 30vw;
+    }
 
 }
 
