@@ -375,6 +375,7 @@ h3{
         font-size: 4vw;
         width: 70%;
         color: var(--main-color);
+        background-image: linear-gradient(to top, var(--main-alt-3), var(--main-alt-2));
     }
 }
 
@@ -1135,6 +1136,10 @@ button:active{
 
 
 .selected-page-highlight{
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 20px;
     color: var(--main-color);
+    background-color: rgb(224, 92, 202);
 }
 
