@@ -372,7 +372,7 @@ h3{
     .action-card{
         font-size: 2vw;
         padding: 2%;
-        transition: font-size 0.25s ease-in-out, width 0.25s ease-in-out;
+        transition: font-size 0.25s ease-in-out, width 0.25s ease-in-out, color 0.5s ease-in-out;
     }
     #actions > .action-card:hover{
         font-size: 4vw;
@@ -432,6 +432,7 @@ h3{
 
 .program-action{
     cursor: pointer;
+    transition: color .35s ease-in-out;
 }
 
 .program-action:hover{
@@ -481,11 +482,9 @@ h3{
     font-size: 6vw;
 }
 
-
 #contact-form{
     margin-bottom: 0vh;
 }
-
 
 #contact-form div{
     max-width: none;
