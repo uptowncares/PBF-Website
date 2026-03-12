@@ -34,7 +34,6 @@ const page_highlight = function(){
     }
     if(index || index == 0){
         const list = document.getElementById("options-container").children;
-        console.log(list[index]);
         const element = list[index].children[0];
         element.classList.add('selected-page-highlight');
     }
