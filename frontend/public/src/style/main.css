@@ -218,11 +218,14 @@ header > *{
 .right-offset-child{
     justify-content: flex-start;
     left: 20%;
+    background-image: linear-gradient(to bottom right, var(--main-alt-3), var(--main-alt-2));
 }
 
 .left-offset-child{
     justify-content: flex-end;
     right: 20%;
+    background-image: linear-gradient(to bottom left, var(--main-alt-2), var(--main-alt-3));
+
 }
 
 .offset-content-grandchild{
