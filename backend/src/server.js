@@ -72,6 +72,31 @@ app.post('/contact-us', async(req, res) => {
 
 });
 
+
+app.post('/volunteer-request', async(req, res) => {
+    if(req.body["name"] && req.body["email"] && req.body["subject"] && req.body["message"]){
+        const name = req.body["name"];
+        const email = req.body["email"];
+        const subject = req.body["subject"];
+        const mssg = req.body["message"];
+        try{
+            const result = await model.add_new_contact(name, email, subject, mssg);
+            if(result){
+                res.status(201).json("success");
+                return;
+            }
+            res.status(500).json({"error": "model issue adding that message"});
+        }catch(error){
+            console.log(error);
+            res.status(500).json({"error": "server issue communicating to the model"});
+        }
+        return;
+    }
+    res.status(400).json({"error": "missing data in body"});
+    return;
+
+});
+
 // express port binding
 app.listen(PORT, () => {
     console.log("server listening on port", PORT);
