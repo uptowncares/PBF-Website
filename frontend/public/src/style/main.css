@@ -84,8 +84,8 @@ header{
 
 #logo-image{
     border: 2px solid var(--border);
-    height: 14vw;
-    width: 14vw;
+    height: 20vw;
+    width: 20vw;
     background-image: url("../../media/pbf-logo-white-518x500-1\ \(1\).png");
     background-position: center;
     background-repeat: no-repeat;
@@ -156,8 +156,8 @@ header > *{
         font-size: 2vw;
     }
     #logo-image{
-        height: 6vw;
-        width: 6vw;
+        height: 8vw;
+        width: 8vw;
     }
     header > *{
         margin: 1vw;
@@ -283,6 +283,10 @@ h3{
     }
     h2{
         font-size: 2.5vw;
+    }
+    h3{
+        max-width: 45vw;
+        font-size: 1.5vw;
     }
     .offset-content-grandchild{
         height: 35vw;
@@ -617,6 +621,7 @@ footer h4{
 
 button{
     border: 2px solid var(--border);
+    cursor: pointer;
 }
 
 button:active{
@@ -840,13 +845,14 @@ button:active{
 .portrait-media{
     height: 80vw;
     width: 65vw;
-    border: 2px solid red;
+    border: 2px solid var(--border);
 }
 
 .subtext-about-founder{
     border-radius: 10px;
     overflow: hidden;
     font-size: 6vw;
+    font-weight: lighter;
     border: 2px solid var(--border);
     transition: height 0.5s ease-in-out;
 }
@@ -855,7 +861,10 @@ button:active{
 @media(min-width: 1100px){
     .subtext-about-founder{
         font-size: 2vw;
-        max-width: 50% !important;
+    }
+    .portrait-media{
+        height: 40vw;
+        width: 35vw;        
     }
 }
 
@@ -873,6 +882,7 @@ button:active{
 }
 
 .toggle-control-founder{
+    border: 2px solid var(--border);
     height: var(--toggle-dimensions);
     width: var(--toggle-dimensions);
     transform: rotate(0deg);
@@ -881,6 +891,15 @@ button:active{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+@media(min-width: 1100px){
+    .toggle-control-founder{
+        height: 4vw;
+        width: 4vw;
+        cursor: pointer;
+    }
+
 }
 
 .toggle-show{
@@ -921,6 +940,9 @@ button:active{
 }
 
 @media(min-width: 1100px){
+    .text-only{
+        width: 35vw;
+    }
     #contact-form form{
         min-width: 40vw;
     }
@@ -928,7 +950,9 @@ button:active{
         font-size: 1vw;
     }
     .instruction-text-form{
-        font-size: 1vw !important;
+        min-width: 0vw;;
+        max-width: 40vw !important;
+        font-size: 2vw !important;
     }
     .input-label{
         font-size: 2vw;
@@ -941,6 +965,13 @@ button:active{
     }
     textarea{
         font-size: 2vw !important;
+    }
+    #submit-container > button{
+        font-size: 3vw;
+    }
+    #submit-container > button:hover{
+        color: var(--main-alt-2);
+        background-color: var(--main-color);
     }
 }
 
@@ -1075,7 +1106,7 @@ button:active{
 }
 
 
-#donations > div:nth-child(2) > div:first-child > div:first-child{
+#donations > div:nth-child(1) > div:first-child > div:first-child{
     background-image: url('../../media/PBF\ Vector.png');
     background-size: contain;
     background-color: var(--main-color);
@@ -1083,11 +1114,6 @@ button:active{
 
 #donations > div > div:first-child{
     margin-bottom: 0vh;
-}
-
-
-.stacked-media:nth-of-type(1){
-    background-image: url('../../media/gallery-baseball-1.jpg');
 }
 
 
@@ -1148,3 +1174,53 @@ button:active{
 .selected-page-highlight img{
     filter: brightness(0) invert(1);
 }
+
+
+.offset-child h1, h3{
+    color: var(--main-color);
+}
+
+.offset-child h3{
+    width: 80vw;
+}
+
+#about-founder > div > div {
+    width: 65vw;
+}
+
+
+@media(min-width: 1100px){
+    .offset-child h3{
+        font-size: 2.5vw;
+    }
+    #about-founder > div > div {
+        width: 35vw;
+    }
+}
+
+#about-founder .portrait-media {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url('../../media/Pierre\ image\ circle.png');
+}
+
+#about-founder div{
+    color: var(--main-color);
+}
+
+#about-founder h2{
+    margin: 0px;
+}
+
+#about-founder h1{
+    color: var(--main-color) !important;
+}
+
+#about-founder > div > div:nth-child(2){
+    justify-content: space-between;
+}
+
+
+
+
