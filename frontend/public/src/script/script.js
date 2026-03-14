@@ -76,8 +76,27 @@ const toggle_more_info_functionality = function(){
 
 const toggle_menu_functionality = function(){
     const menuButton = document.getElementById('menu-button');
+    const animation = lottie.loadAnimation({
+        container: menuButton,
+        renderer: 'svg',
+        loop: false,
+        autoplay: false,
+        path: '../../public/icons/icons8-menu.json'
+    });
+    animation.setSpeed(0.5);
+
     menuButton.addEventListener("click", (event) => {
-        console.log("clicking", event.target);
+        toggle_hamburger(animation)
         document.getElementById('options-container').classList.toggle('show-menu');
     });
+}
+
+
+const toggle_hamburger = function(animation){
+    if(animation.currentFrame == 14){
+        animation.playSegments([15, 0], true);
+    }
+    else{
+        animation.playSegments([0, 15], true);
+    }
 }

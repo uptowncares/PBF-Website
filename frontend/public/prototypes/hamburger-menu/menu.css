@@ -1,0 +1,33 @@
+
+
+:root{
+    --border-color: red
+    
+
+
+}
+
+
+body, html{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    margin: 0px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--border-color);
+}
+
+#menu{
+    height: 10vw;
+    width: 10vw;
+    border: 2px solid var(--border-color);
+}
+
+
+
+
