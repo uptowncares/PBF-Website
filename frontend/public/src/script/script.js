@@ -83,7 +83,7 @@ const toggle_menu_functionality = function(){
         autoplay: false,
         path: '../../public/icons/icons8-menu.json'
     });
-    animation.setSpeed(0.5);
+    animation.setSpeed(0.75);
 
     menuButton.addEventListener("click", (event) => {
         toggle_hamburger(animation)
