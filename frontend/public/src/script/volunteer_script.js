@@ -3,12 +3,15 @@
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    dismiss_notification_functionality();
+    system_notification("The volunteer form is unavailable", "We are not able to accept any more volunteers at this time. Please try again later.", true);
 
-
-
-
-    
 });
+
+const dismiss_notification_functionality = function(){
+    const button = document.getElementById('notification-confirmation');
+    button.addEventListener('click', () => system_notification("", "", false));
+}
 
 
 
