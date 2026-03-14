@@ -53,6 +53,8 @@ body{
     min-height: 100vh;
     margin: 0px;
     background-color: var(--main-color);
+    background-image: linear-gradient(to left, rgba(0, 255, 255, 0.4), var(--main-color));
+    /*background-image: linear-gradient(to right, rgb(198, 198, 198), var(--main-color));*/
 }
 
 
@@ -1312,7 +1314,3 @@ button:active{
 #gallery > div:nth-child(3) > div:first-child > div:nth-child(4){
     background-image: url('../../media/gallery-community-4.jpg');
 }
-
-
-
-
