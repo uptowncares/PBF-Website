@@ -3,13 +3,21 @@
 
 document.addEventListener("DOMContentLoaded", () => {
     toggle_menu_functionality();
+    page_highlight();
+    header_contact_navigation();
+
     toggle_more_info_functionality();
     toggle_about_founder_functionality();
-    page_highlight();
 
 
 });
 
+const header_contact_navigation = function(){
+    const button = document.getElementById("header-actions").children[0];
+    button.addEventListener("click", () => {
+        window.location.assign('contact.html');
+    });
+}
 
 const page_highlight = function(){
     const pageTitle = document.head.children[0];
