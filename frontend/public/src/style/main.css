@@ -111,10 +111,28 @@ header{
         padding: 1vw;
         border: 2px solid var(--border);
         font-size: 2vw;
+        animation: get_attention 0.25s;
+        animation-iteration-count: 5;
+        animation-delay: 4s;
     }
     #header-actions > div:first-child:active{
         filter: brightness(75%);
     }
+}
+
+
+@keyframes get_attention {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+
+    }
+
 }
 
 #logo-container{
@@ -358,7 +376,17 @@ h2{
     font-weight: 300;
     margin-top: 1vh;
     color: var(--dark-purple);
+    opacity: 0;
+    transition: opacity 1.0s ease-in-out;
+}
 
+.no-fade-in-text{
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+.text-fade-in{
+    opacity: 1;
 }
 
 h3{
