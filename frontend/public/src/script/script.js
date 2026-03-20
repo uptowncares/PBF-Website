@@ -5,11 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle_menu_functionality();
     page_highlight();
     header_contact_navigation();
-
-    toggle_more_info_functionality();
-    toggle_about_founder_functionality();
-
-
 });
 
 const header_contact_navigation = function(){
@@ -20,24 +15,24 @@ const header_contact_navigation = function(){
 }
 
 const page_highlight = function(){
-    const pageTitle = document.head.children[0];
-    let index = false;
-    if((pageTitle.textContent).split(" ")[0] == "Home"){
+    const pageTitle = ((document.head.children[0]).textContent).split(" ")[0];
+    let index = undefined;
+    if(pageTitle == "Home"){
         index = 0;
     }
-    else if((pageTitle.textContent).split(" ")[0] == "About"){
+    else if(pageTitle == "About"){
         index = 1;
     }
-    else if((pageTitle.textContent).split(" ")[0] == "Programs"){
+    else if(pageTitle == "Programs"){
         index = 4;
     }
-    else if((pageTitle.textContent).split(" ")[0] == "Donate"){
+    else if(pageTitle == "Donate"){
         index = 5;
     }
-    else if((pageTitle.textContent).split(" ")[0] == "Contact"){
+    else if(pageTitle == "Contact"){
         index = 3;
     }
-    else if((pageTitle.textContent).split(" ")[0] == "Gallery"){
+    else if(pageTitle == "Gallery"){
         index = 2;
     }
     if(index || index == 0){
@@ -46,41 +41,6 @@ const page_highlight = function(){
         element.classList.add('selected-page-highlight');
     }
 }
-
-
-const toggle_about_founder_functionality = function(){
-    const buttons = Array.from(document.getElementsByClassName('toggle-control-founder'));
-    buttons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            const text = event.target.parentNode.parentNode.children[2];
-            event.target.classList.toggle("toggle-show");
-            if(text.style.height == '0px' || !(text.style.height)){
-                text.style.height = text.scrollHeight + 'px';
-            } 
-            else{
-                text.style.height =  '0px';
-            }
-        });
-    })
-}
-
-
-const toggle_more_info_functionality = function(){
-    const buttons = Array.from(document.getElementsByClassName('toggle-control'));
-    buttons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-            const text = event.target.parentNode.parentNode.children[1];
-            event.target.classList.toggle("toggle-show");
-            if(text.style.height == '0px' || !(text.style.height)){
-                text.style.height = text.scrollHeight + 'px';
-            } 
-            else{
-                text.style.height =  '0px';
-            }
-        });
-    })
-}
-
 
 const toggle_menu_functionality = function(){
     const menuButton = document.getElementById('menu-button');
@@ -98,7 +58,6 @@ const toggle_menu_functionality = function(){
         document.getElementById('options-container').classList.toggle('show-menu');
     });
 }
-
 
 const toggle_hamburger = function(animation){
     if(animation.currentFrame == 14){
