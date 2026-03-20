@@ -113,7 +113,7 @@ header{
         font-size: 2vw;
         animation: get_attention 0.25s;
         animation-iteration-count: 5;
-        animation-delay: 4s;
+        animation-delay: 10s;
     }
     #header-actions > div:first-child:active{
         filter: brightness(75%);
