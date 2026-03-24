@@ -120,7 +120,6 @@ header{
     }
 }
 
-
 @keyframes get_attention {
     0% {
         transform: rotate(-10deg);
@@ -130,9 +129,7 @@ header{
     }
     100% {
         transform: rotate(0deg);
-
     }
-
 }
 
 #logo-container{
@@ -270,7 +267,6 @@ header > *{
     header > *{
         margin: 1vw;
     }
-
 }
 
 .media{
@@ -376,8 +372,6 @@ h2{
     font-weight: 300;
     margin-top: 1vh;
     color: var(--dark-purple);
-    opacity: 0;
-    transition: opacity 1.0s ease-in-out;
 }
 
 .no-fade-in-text{
@@ -878,11 +872,22 @@ button:active{
     height: var(--toggle-dimensions);
     width: var(--toggle-dimensions);
     transform: rotate(0deg);
-    transition: transform var(--toggle-transform-speed) ease-in-out;
+    transition: transform var(--toggle-transform-speed) ease-in-out, background-color .25s ease-in-out;
     background-image: url("../../icons/icons8-back-100.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    background-color: var(--cyanish);
+    border-radius: 20px;
+    padding: 3%;
+}
+
+
+@media(min-width: 1100px){
+    .toggle-control{
+        border-radius: 5px;
+    }
 
 }
 
@@ -1400,3 +1405,59 @@ button:active{
 #gallery > div:nth-child(3) > div:first-child > div:nth-child(4){
     background-image: url('../../media/gallery-community-4.jpg');
 }
+
+
+
+
+
+
+
+
+
+
+.event div {
+    border: 2px solid var(--border);
+}
+
+#events{
+    margin-right: 30vw;
+    margin-left: 5vw;
+}
+
+.event > div:first-child > div:nth-child(2){
+    font-size: 10vw;
+    color: var(--main-color);
+}
+
+.date-container > div:first-child{
+    font-size: 8vw;
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.event > div:first-child > div:first-child{
+    transform: rotate(180deg);
+}
+
+
+.event-data > div:first-child, .event-data > div:nth-child(2){
+    font-size: 7vw;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.dates > div{
+    font-size: 5vw;
+    text-align: center;
+    color: var(--main-color);
+}
+
+.event > div:first-child > div:first-child, .date-container > div:nth-child(2){
+    height: 10vw;
+    width: 10vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../../icons/icons8-back-100.png");
+}
+

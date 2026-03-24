@@ -7,6 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
     header_contact_navigation();
 
 
+});
+
+
+const scrollIntoText_functionality = function(){
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach((entry) => {
             if(entry.isIntersecting){
@@ -20,16 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: 1.0
     });
 
-
     const text = Array.from(document.getElementsByTagName('h2'));
     text.forEach((element) => {
         observer.observe(element);
-    })
+    });
 
-
-
-
-});
+}
 
 const header_contact_navigation = function(){
     const button = document.getElementById("header-actions").children[0];

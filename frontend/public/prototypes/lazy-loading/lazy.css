@@ -1,0 +1,73 @@
+
+
+
+:root{
+
+}
+
+
+html, body{
+    height: auto;
+    width: 100%;
+    margin: 0px;
+}
+
+
+body{
+    overflow-x: hidden;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 68, 0, 0.675);
+}
+
+
+body > img{
+    border: 2px solid green;
+    height: 60vh;
+    width: 50vw;
+    margin-bottom: 50vh;
+}
+
+
+/*
+
+body > div:nth-child(1){
+    background-image: url("../../media/a-creative-wonderland.jpg");
+}
+body > div:nth-child(2){
+    background-image: url("../../media/encouragment.jpg");
+}
+body > div:nth-child(3){
+    background-image: url("../../media/gallery-baseball-1.jpg");
+}
+body > div:nth-child(4){
+    background-image: url("../../media/gallery-baseball-2.jpg");
+}
+body > div:nth-child(5){
+    background-image: url("../../media/gallery-baseball-3.jpg");
+}
+body > div:nth-child(6){
+    background-image: url("../../media/gallery-baseball-4.jpg");
+}
+body > div:nth-child(7){
+    background-image: url("../../media/gallery-community-1.jpg");
+}
+body > div:nth-child(8){
+    background-image: url("../../media/gallery-community-2.jpg");
+}
+body > div:nth-child(9){
+    background-image: url("../../media/gallery-feeding-1.jpg");
+}
+body > div:nth-child(10){
+    background-image: url("../../media/gallery-feeding-2.jpg");
+}
+body > div:nth-child(11){
+    background-image: url("../../media/gallery-feeding-3.jpg");
+}
+
+
+*/
+
