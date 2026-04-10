@@ -312,6 +312,8 @@ header > *{
 }
 
 .offset-child{
+    box-shadow: 5px 10px 5px grey;
+
     border: 2px solid var(--border);
     border-radius: 60px;
     height: auto;
@@ -655,10 +657,16 @@ input{
     border-radius: var(--input-fields-border-radius);
 }
 
+#contact-form input, #contact-form select{
+    padding: 1%;
+}
+
 select{
+    cursor: pointer;
     border-radius: var(--input-fields-border-radius);
     min-width: 100% !important;
 }
+
 
 input:focus{
     outline: none;
