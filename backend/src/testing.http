@@ -18,16 +18,15 @@ Content-Type: application/json
 }
 
 ###
-POST http://127.0.0.1:3000/volunteer-request
+POST http://127.0.0.1:3000/volunteer-registration
 Content-Type: application/json
 
 {
     "name": "Blake Anderson",
     "email": "andersonblake@gmail.com",
-    "event title": "Serve a soul",
+    "event": "Serve a soul",
     "date": "3/14/2023",
-    "time": "1pm - 3pm",
-    "location": "1234 main st. rougue, CA 91002"
+    "description": "Something something something lightside"
 }
 
 ###

@@ -18,10 +18,9 @@ const contactSchema = mongoose.Schema({
 const volunteerSchema = mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true},
-    event_title: {type: String, required: true},
-    location: {type: String, required: true},
+    event: {type: String, required: true},
     date: {type: String, required: true},
-    time: {type: String, required: true}
+    description: {type: String, required: true}
 })
 
 const contactModel = mongoose.model('new-contact', contactSchema, 'Contact_requests');
@@ -29,8 +28,8 @@ const contactModel = mongoose.model('new-contact', contactSchema, 'Contact_reque
 const volunteerModel = mongoose.model('new-volunteer', volunteerSchema, 'Volunteers');
 
 
-const add_new_volunteer = async(name, email, title, location, date, time) => {
-    const newVolunteer = volunteerModel({name: name, email: email, event_title: title, location: location, date: date, time: time});
+const add_new_volunteer = async(name, email, event, date, description) => {
+    const newVolunteer = volunteerModel({name: name, email: email, event: event, date: date, description: description});
     try{
         newVolunteer.save();
         return true;

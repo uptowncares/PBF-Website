@@ -23,7 +23,7 @@ const slideshow_transitions = function(){
         let index = Number(JSON.parse(localStorage.getItem("PEGGY-BEATRICE-FOUNDATION"))["index"]);
         if(images[index].classList.contains("show-hero-image")){
             images[index].classList.remove("show-hero-image");
-            index = (index >= (images.length - 1)) ? 0 : (index + 1)
+            index = (index >= ((images.length - 1) - 1)) ? 0 : (index + 1)
             reset_index(index);
         }
         images[index].classList.add("show-hero-image");
