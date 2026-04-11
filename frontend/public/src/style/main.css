@@ -92,6 +92,8 @@ header{
 #header-actions > div:first-child{
     display: none;
     transition: transform 0.1s ease-in-out;
+    box-shadow: 5px 5px 5px grey;
+
 }
 
 #header-actions > div:first-child:hover{
@@ -1583,7 +1585,7 @@ button:active{
     bottom: 10%;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 70%;
     left: 5%;
     height: 20vw;
     width: 20vw;
