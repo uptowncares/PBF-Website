@@ -6,7 +6,7 @@ const cors = require('cors');
 
 // constants
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
@@ -69,7 +69,6 @@ app.post('/contact-us', async(req, res) => {
     }
     res.status(400).json({"error": "missing data in body"});
     return;
-
 });
 
 
@@ -95,7 +94,6 @@ app.post('/volunteer-registration', async(req, res) => {
     }
     res.status(400).json({"error": "missing data in body"});
     return;
-
 });
 
 // express port binding
