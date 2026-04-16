@@ -73,7 +73,7 @@ const toggle_menu_functionality = function(){
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: '../../public/icons/icons8-menu.json'
+        path: '/icons/icons8-menu.json'
     });
     animation.setSpeed(0.75);
 
