@@ -1589,7 +1589,7 @@ button:active{
     height: 20vw;
     width: 20vw;
     background-color: var(--cyanish);
-    border-radius: 40px;
+    border-radius: 50%;
     opacity: 0.5;
     z-index: 1;
     background-image: url("../../icons/icons8-caring-100.png");
