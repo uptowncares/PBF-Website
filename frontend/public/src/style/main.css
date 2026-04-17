@@ -1600,7 +1600,6 @@ button:active{
         cursor: pointer;
         height: 7.5vw;
         width: 7.5vw;
-        border-radius: 20px;
         transition: transform 0.1s ease-in-out;
     }
     #quick-action:hover{
