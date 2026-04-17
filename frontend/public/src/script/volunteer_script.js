@@ -74,7 +74,7 @@ const clear_form = function(inputs, textarea){
 
 const send_volunteer_request = async(name, email, date, event, description, inputs, textarea) => {
     try{
-        const response = await fetch("http://127.0.0.1:3000/volunteer-registration", {
+        const response = await fetch("https://pbf-website.onrender.com/volunteer-registration", {
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: JSON.stringify({

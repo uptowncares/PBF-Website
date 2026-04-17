@@ -50,7 +50,7 @@ const clear_contact_form = function(inputs, textarea){
 
 const send_contact_request = async(name, email, subject, message, inputs, textarea) => {
     try{
-        const response = await fetch("http://127.0.0.1:3000/contact-us", {
+        const response = await fetch("https://pbf-website.onrender.com/contact-us", {
             method: "POST",
             headers: {"Content-type": "application/json"},
             body: JSON.stringify({
