@@ -33,13 +33,11 @@ const volunteer_form_functionality = function(){
     form.addEventListener("submit", (event) => process_volunteer_request(event));
 }
 
-
 const process_volunteer_request = function(event){
     event.preventDefault();
     const inputs = Array.from(document.getElementsByTagName('input'));
     const select = Array.from(document.getElementsByTagName('select'))[0];
     const textarea = Array.from(document.getElementsByTagName('textarea'))[0];
-
     let invalidForm = false;
     if(textarea.value == "") invalidForm = true;
     if(!invalidForm){
