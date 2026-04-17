@@ -34,7 +34,7 @@ const scrollIntoText_functionality = function(){
 const header_contact_navigation = function(){
     const button = document.getElementById("header-actions").children[0];
     button.addEventListener("click", () => {
-        window.location.assign('contact.html');
+        window.location.assign('/contact');
     });
 }
 
