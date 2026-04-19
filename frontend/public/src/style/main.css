@@ -911,7 +911,7 @@ button:active{
     width: var(--toggle-dimensions);
     transform: rotate(0deg);
     transition: 
-        transform var(--toggle-transform-speed) ease-in-out 0.7s; 
+        transform var(--toggle-transform-speed) ease-in-out; 
     background-image: url("../../icons/icons8-back-100.png");
     background-repeat: no-repeat;
     background-position: center;
