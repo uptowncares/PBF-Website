@@ -1,5 +1,7 @@
 'use strict';
 
+import loader from './loading_script.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
     contact_functionality();
@@ -49,7 +51,7 @@ const clear_contact_form = function(inputs, textarea){
 }
 
 const send_contact_request = async(name, email, subject, message, inputs, textarea) => {
-    const animationInstance = show_loading();
+    const animationInstance = loader.show_loading();
     try{
         const response = await fetch("https://pbf-website.onrender.com/contact-us", {
             method: "POST",
@@ -81,7 +83,7 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
         system_notification("please try again.", "There was a network issue sending that request", true);
     }
     finally{
-        dismiss_loading(animationInstance);
+        loader.dismiss_loading(animationInstance);
     }
 }
 
@@ -110,23 +112,3 @@ const system_notification = function(h1, h2, boolean){
         backdrop.classList.remove('show-backdrop');
     }
 }
-
-
-
-const show_loading = function(){
-    const animation = document.getElementById('loader-icon');
-    animation.style.display = 'flex';
-    return lottie.loadAnimation({
-        container: animation,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: '../../public/icons/Loader.json'
-    });
-}
-
-const dismiss_loading = function(animationInstance){
-    document.getElementById('loader-icon').style.display = 'none';
-    animationInstance.destroy();
-}
-
