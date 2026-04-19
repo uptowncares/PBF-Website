@@ -721,9 +721,16 @@ select{
 
 #submit-container > button{
     box-shadow: 5px 5px 5px purple;
-    border-radius: 10px;
+    border-radius: 30px;
     font-size: 6vw;
     width: 100%;
+}
+
+@media(min-width: 1100px){
+    #submit-container > button{
+        border-radius: 20px;
+    }
+
 }
 
 footer{
@@ -1437,6 +1444,10 @@ button:active{
     padding: 3%;
     background-image: linear-gradient(to top left, rgb(207, 23, 176), rgb(127, 108, 222));
     border-radius: 30px;
+}
+
+.event .content-parent{
+    margin-bottom: 0vh;
 }
 
 .event div {
