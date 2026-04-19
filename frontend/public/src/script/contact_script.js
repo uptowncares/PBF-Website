@@ -49,6 +49,7 @@ const clear_contact_form = function(inputs, textarea){
 }
 
 const send_contact_request = async(name, email, subject, message, inputs, textarea) => {
+    const animationInstance = show_loading();
     try{
         const response = await fetch("https://pbf-website.onrender.com/contact-us", {
             method: "POST",
@@ -59,7 +60,7 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
                 "subject": subject,
                 "message": message
             })
-        })
+        });
         switch(response.status){
             case 201:
                 clear_contact_form(inputs, textarea);
@@ -79,6 +80,9 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
         console.log(error);
         system_notification("please try again.", "There was a network issue sending that request", true);
     }
+    finally{
+        dismiss_loading(animationInstance);
+    }
 }
 
 const dismiss_notification_functionality = function(){
@@ -86,14 +90,12 @@ const dismiss_notification_functionality = function(){
     button.addEventListener('click', () => system_notification("", "", false));
 }
 
-
 const populate_notification_text = function(parent, h1, h2){
     const title = parent.children[0];
     title.textContent = h1;
     const subtitle = parent.children[1];
     subtitle.textContent = h2;
 }
-
 
 const system_notification = function(h1, h2, boolean){
     const backdrop = document.getElementById('backdrop');
@@ -108,3 +110,23 @@ const system_notification = function(h1, h2, boolean){
         backdrop.classList.remove('show-backdrop');
     }
 }
+
+
+
+const show_loading = function(){
+    const animation = document.getElementById('loader-icon');
+    animation.style.display = 'flex';
+    return lottie.loadAnimation({
+        container: animation,
+        renderer: 'svg',
+        loop: true,
+        autoplay: true,
+        path: '../../public/icons/Loader.json'
+    });
+}
+
+const dismiss_loading = function(animationInstance){
+    document.getElementById('loader-icon').style.display = 'none';
+    animationInstance.destroy();
+}
+

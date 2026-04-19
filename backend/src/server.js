@@ -11,6 +11,7 @@ const PORT = process.env.PORT || 3000;
 // middleware
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../../frontend/public')));
+/*
 app.use(cors({
     origin: function (origin, callback) {
     if (!origin || origin === 'null') {
@@ -20,6 +21,7 @@ app.use(cors({
     }
     }
 }));
+*/
 
 // page routing
 app.get('/', (req, res) => {
