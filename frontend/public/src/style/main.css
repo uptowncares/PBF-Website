@@ -1551,6 +1551,7 @@ button:active{
         margin-left: ;
     }
     .event > div:first-child > div:nth-child(2){
+        width: 100%;
         font-size: 2vw;
     }
     .date-container > div:first-child{
