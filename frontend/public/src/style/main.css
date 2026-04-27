@@ -1494,17 +1494,29 @@ button:active{
 }
 
 .dates > div{
+    padding: 3%;
+    background-color: var(--main-alt-2);
+    border: 5px solid var(--main-alt-2);
+    border-radius: 1.75vh;
     font-size: 5vw;
     text-align: center;
     color: var(--main-color);
 }
 
 .dates{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     overflow-y: hidden;
     height: auto;
     transition: max-height 0.5s ease-in-out;
     max-height: 0vh;
+    gap: 50px;
+}
 
+.dates > div:first-child{
+    margin-top: 3vh;
 }
 
 .dates-open{
@@ -1524,6 +1536,19 @@ button:active{
 }
 
 @media(min-width: 1100px){
+
+    .dates > div{
+        transition: 
+            background-color 0.25s ease-in-out, 
+            border 0.25s ease-in-out,
+            color 0.25s ease-in-out;
+        cursor: pointer;
+    }
+    .dates > div:hover{
+        color: var(--main-alt-2);
+        background-color: var(--main-color);
+        border: 5px solid var(--main-color);
+    }
     .event-data{
         overflow-y: hidden;
         width: auto;
