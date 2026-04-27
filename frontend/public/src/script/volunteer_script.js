@@ -3,20 +3,54 @@ document.addEventListener("DOMContentLoaded", () => {
     dismiss_notification_functionality();
     volunteer_form_functionality();
     toggle_event_data_functionality();
+    toggle_dates_functionality();
 
 
 
 
+    let dates = document.getElementsByClassName("dates");
+    if(dates.length > 0){
+        dates = Array.from(Array.from(dates)[0].children);
+        dates.forEach((dateElement) => {
+            dateElement.addEventListener("click", (event) => {
 
+                Array.from(document.getElementsByName("volunteer-form"))[0].scrollIntoView({behavior:"smooth"});
+
+                const dateInput = Array.from(document.getElementsByTagName('input'))[2];
+                flicker_date_autofill(dateInput, event);
+            })
+        })
+    }
+
+
+});
+
+
+const flicker_date_autofill = function(dateInput, event){
+
+    const cycle = 800;
+
+    for(let i = 0; i < 4; i++){
+        setTimeout(() => {
+            dateInput.value = "";
+        }, i * cycle);
+
+        setTimeout(() => {
+            dateInput.value = event.target.id;
+        }, i * cycle + 200)
+    }
+
+}
+
+
+const toggle_dates_functionality = function(){
     const eventDatesToggle = document.getElementById("events").children[1].children[1].children[2].children[0].children[1];
     eventDatesToggle.addEventListener("click", (event) => {
         event.target.classList.toggle("toggle-show");
         const dates = event.target.parentNode.parentNode.children[1];
         dates.classList.toggle("dates-open");
     });
-
-
-});
+}
 
 const toggle_event_data_functionality = function(){
     const eventDataToggle = document.getElementById("events").children[1].children[0].children[0];
