@@ -1520,7 +1520,7 @@ button:active{
 }
 
 .dates-open{
-    max-height: 50vh !important;
+    max-height: 55vh !important;
 }
 
 .event > div:first-child > div:first-child, .date-container > div:nth-child(2){
