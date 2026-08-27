@@ -37,7 +37,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload frontend source
-          path: './frontend/src'
+          path: './frontend/public/src'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
