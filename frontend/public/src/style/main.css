@@ -1,5 +1,3 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
 
@@ -31,12 +29,10 @@
     width: 10px;
 }
 
-
 ::-webkit-scrollbar-thumb{
     background-color: purple;
     border-radius: 5px;
 }
-
 
 *{
     font-family: "Zain";
@@ -161,11 +157,6 @@ header{
     max-width: none !important;
     align-self: flex-start;
     color: var(--dark-purple);
-
-}
-
-#logo-text-parent a {
-
 }
 
 #logo-text-top{
@@ -315,7 +306,6 @@ header > *{
 
 .offset-child{
     box-shadow: 5px 10px 5px grey;
-
     border: 2px solid var(--border);
     border-radius: 60px;
     height: auto;
@@ -339,7 +329,6 @@ header > *{
     justify-content: flex-end;
     right: 20%;
     background-image: linear-gradient(to bottom left, var(--main-alt-2), var(--main-alt-3));
-
 }
 
 .offset-content-grandchild{
@@ -417,7 +406,6 @@ h3{
     .offset-content-grandchild{
         height: 35vw;
         width: 35vw;
-
     }
     .left-offset-grandchild{
         margin-right: 20vw;
@@ -438,9 +426,6 @@ h3{
         right: 30%;
     }
 }
-
-
-
 
 .about-title{
     margin-left: 0vw;
@@ -526,8 +511,6 @@ h3{
     margin-bottom: 0vh;
     height: auto;
     width: auto !important;
-
-
 }
 #programs > * > * > *{
     max-width: 80vw !important;
@@ -539,11 +522,6 @@ h3{
     background-size: cover;
     height: 45vw;
     width: 80vw;
-}
-
-
-@media(min-width: 1100px){
-
 }
 
 .program-title-container{
@@ -566,7 +544,6 @@ h3{
     font-size: 8vw;
     font-weight: 700;
     color: var(--main-color);
-
 }
 
 .program-action{
@@ -590,7 +567,6 @@ h3{
     height: auto !important;
     width: 100%;
     border: 2px solid var(--border);
-
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -669,7 +645,6 @@ select{
     min-width: 100% !important;
 }
 
-
 input:focus{
     outline: none;
     border: 6px solid var(--main-alt-2);
@@ -691,7 +666,6 @@ input:focus{
 #contact-form *{
     font-family: inherit;
     color: white;
-
 }
 
 textarea{
@@ -708,8 +682,6 @@ textarea:focus{
 
 select{
     color: black !important;
-
-
 }
 
 #submit-container{
@@ -730,7 +702,6 @@ select{
     #submit-container > button{
         border-radius: 20px;
     }
-
 }
 
 footer{
@@ -776,8 +747,6 @@ footer h4{
     font-size: 6vw;
 }
 
-
-
 button{
     border: 2px solid var(--border);
     cursor: pointer;
@@ -789,15 +758,12 @@ button:active{
 
 #socials-container{
     margin-top: 5vh !important;
-
 }
 
 .social-icon{
     height: 12vw;
     width: 12vw;
     border: 2px solid var(--border);
-
-
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -855,8 +821,6 @@ button:active{
     color: var(--main-color);
 }
 
-
-
 .more-info > div{
     margin-left: 50vw;
     margin-bottom: 3vh;
@@ -864,7 +828,6 @@ button:active{
 
 .more-info > div > div{
     margin-right: 10vw;
-
 }
 
 .more-info > div > div:first-child{
@@ -872,7 +835,6 @@ button:active{
     border: 5px solid var(--main-color);
     border-radius: 20px;
 }
-
 
 .more-info div{
     max-width: none !important;
@@ -924,7 +886,6 @@ button:active{
         border-radius: 5px;
     }
 }
-
 
 .subtext-more-info{
     text-align: center;
@@ -1004,7 +965,6 @@ button:active{
         height: 20vw;
         width: 30vw;
     }
-
 }
 
 .portrait-media{
@@ -1087,19 +1047,16 @@ button:active{
 .unrestricted-column > div > div{
     height: auto;
     width: auto;
-
 }
 
 .text-only{
     width: 70vw;
 }
 
-
 #legal h2{
     max-width: 90%;
     font-size: 4vw;
 }
-
 
 .boundary{
     height: 0px;
@@ -1145,7 +1102,6 @@ button:active{
     }
 }
 
-
 #notification-modal{
     padding: 3%;
     padding-bottom: 4vh;
@@ -1159,20 +1115,16 @@ button:active{
     background-color: var(--main-color);
     transition: opacity 1s ease-in-out;
     z-index: 3;
-
 }
 
 #notification-modal > *{
     max-width: none;
     width: 70vw;
-
 }
 
 #notification-modal > h1{
     margin-left: 0px;
 }
-
-
 
 #notification-modal > button{
     border-radius: 30px;
@@ -1180,13 +1132,11 @@ button:active{
     margin-top: 2vh;
     font-size: 10vw;
     color: var(--main-color);
-
 }
 
 @media(min-width: 1100px){
     #notification-modal > *{
         width: 50vw;
-
     }
     #notification-modal > button{
         cursor: pointer;
@@ -1196,8 +1146,6 @@ button:active{
         background-color: var(--main-color);
         color: var(--main-alt-2);
     }
-
-
 }
 
 #backdrop{
@@ -1328,7 +1276,6 @@ button:active{
     }
 }
 
-
 .selected-page-highlight{
     padding-left: 2vw;
     padding-right: 2vw;
@@ -1341,7 +1288,6 @@ button:active{
     filter: brightness(0) invert(1);
 }
 
-
 .offset-child h1, h3{
     color: var(--main-color);
 }
@@ -1353,7 +1299,6 @@ button:active{
 #about-founder > div > div {
     width: 65vw;
 }
-
 
 @media(min-width: 1100px){
     .offset-child h3{
@@ -1392,7 +1337,6 @@ button:active{
     margin-bottom: 0vh;
 }
 
-
 #gallery > div:nth-child(1) > div:first-child > div:nth-child(2){
     background-image: url('../../media/gallery-baseball-1.jpg');
 
@@ -1410,27 +1354,21 @@ button:active{
     
 }
 
-
 #gallery > div:nth-child(2) > div:first-child > div:nth-child(2){
     background-image: url('../../media/gallery-feeding-1.jpg');
-    
 }
 #gallery > div:nth-child(2) > div:first-child > div:nth-child(3){
     background-image: url('../../media/gallery-feeding-2.jpg');
-    
 }
 #gallery > div:nth-child(2) > div:first-child > div:nth-child(4){
     background-image: url('../../media/gallery-feeding-3.jpg');
 }
 
-
 #gallery > div:nth-child(3) > div:first-child > div:nth-child(2){
     background-image: url('../../media/gallery-community-1.jpg');
-    
 }
 #gallery > div:nth-child(3) > div:first-child > div:nth-child(3){
     background-image: url('../../media/gallery-community-2.jpg');
-    
 }
 #gallery > div:nth-child(3) > div:first-child > div:nth-child(4){
     background-image: url('../../media/a-creative-wonderland.jpg');
@@ -1438,7 +1376,6 @@ button:active{
 #gallery > div:nth-child(3) > div:first-child > div:nth-child(5){
     background-image: url('../../media/gallery-community-4.jpg');
 }
-
 
 .event{
     padding: 3%;
@@ -1485,7 +1422,6 @@ button:active{
 .event-data-open{
     max-height: 50vh !important;
 }
-
 
 .event-data > div:first-child, .event-data > div:nth-child(2){
     font-size: 7vw;
@@ -1536,7 +1472,6 @@ button:active{
 }
 
 @media(min-width: 1100px){
-
     .dates > div{
         transition: 
             background-color 0.25s ease-in-out, 
@@ -1598,14 +1533,12 @@ button:active{
     }
 }
 
-
 #slideshow-backdrop{
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--main-color);
     font-size: 5vw;
-    
     position: absolute;
     bottom: 0%;
     width: 100%;
@@ -1640,9 +1573,7 @@ button:active{
         transform: scale(1.1);
         opacity: 1;
     }
-
 }
-
 
 #page-load{
     height: 100%;
@@ -1680,4 +1611,3 @@ button:active{
         width: 25vw;
     }
 }
-

@@ -4,7 +4,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
         dismiss_notification_functionality();
-        process_donation();
+        //process_donation();
 
 });
 
