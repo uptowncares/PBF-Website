@@ -8,7 +8,7 @@ const show_loading = function(){
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../../public/icons/Loader.json'
+        path: '../icons/Loader.json'
     });
 }
 
