@@ -6,8 +6,9 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(cors({
-    origin : "uptowncares.github.io",
-    methods : ["POST", "OPTIONS"]
+    origin : "https://peggybeatricefoundation.org",
+    methods : ["POST", "OPTIONS"],
+    allowedHeaders : ["Content-Type"]
 }));
 
 app.post('/contact-us', async(req, res) => {
