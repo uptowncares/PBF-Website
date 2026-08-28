@@ -66,21 +66,21 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
         switch(response.status){
             case 201:
                 clear_contact_form(inputs, textarea);
-                system_notification("Thank you for reaching out", "we will get back to you as soon as possible.", true);
+                system_notification("Thank you for reaching out", "We will get back to you as soon as possible.", true);
                 break;
             case 400:
-                system_notification("please try again.", "There was an issue with that request", true);
+                system_notification("Please try again.", "There was an issue with that request.", true);
                 break;
             case 500:
-                system_notification("please try again", "The server had an issue processing that request", true);
+                system_notification("Please try again", "The server had an issue processing that request.", true);
                 break;
             default:
-                system_notification( "please try again", "There has been an unexpected issue", true);
+                system_notification( "Please try again", "There has been an unexpected issue.", true);
                 break;
         }
     }catch(error){
         console.log(error);
-        system_notification("please try again.", "There was a network issue sending that request", true);
+        system_notification("Please try again.", "There was a network issue sending that request.", true);
     }
     finally{
         loader.dismiss_loading(animationInstance);
