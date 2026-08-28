@@ -5,15 +5,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
-
-
 app.use(cors({
     origin : "uptowncares.github.io",
     methods : ["POST", "OPTIONS"]
 }));
 
-
-// services
 app.post('/contact-us', async(req, res) => {
     if(req.body["name"] && req.body["email"] && req.body["subject"] && req.body["message"]){
         const name = req.body["name"];
@@ -36,7 +32,6 @@ app.post('/contact-us', async(req, res) => {
     res.status(400).json({"error": "missing data in body"});
     return;
 });
-
 
 app.post('/volunteer-registration', async(req, res) => {
     if(req.body["name"] && req.body["email"] && req.body["date"] && req.body["event"]){
@@ -62,7 +57,6 @@ app.post('/volunteer-registration', async(req, res) => {
     return;
 });
 
-// express port binding
 app.listen(PORT, () => {
     console.log("server listening on port", PORT);
 });
