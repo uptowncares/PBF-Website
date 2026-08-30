@@ -1,12 +1,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-
-
-    console.log("date:", new Date());
-
-
-
-
+    populate_event_dates();
     dismiss_notification_functionality();
     volunteer_form_functionality();
     toggle_event_data_functionality();
@@ -15,6 +9,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+
+const add_to_event_list = function(givenDay, dateUIContainer){
+    const dateUIElement = document.createElement('div');
+    dateUIElement.id = `
+    ${givenDay.getFullYear()}-
+    ${String(givenDay.getMonth() + 1).padStart(2, "0")}-
+    ${String(givenDay.getDate()).padStart(2, "0")}
+    `;
+    dateUIElement.textContent = givenDay.toUTCString();
+    dateUIContainer.appendChild(dateUIElement);
+}
+
+const populate_event_dates = function(){
+    const dateUIContainer = Array.from(document.getElementsByClassName("dates"))[0];
+    let givenDay = new Date();
+    while(((dateUIContainer.children).length) < 5){
+        givenDay.setDate(givenDay.getDate() + 1);
+        if(givenDay.getDay() == 2) add_to_event_list(givenDay, dateUIContainer);
+    }
+}
 
 const date_autofill_functionality = function(){
     let dates = document.getElementsByClassName("dates");
