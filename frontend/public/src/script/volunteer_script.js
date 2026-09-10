@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const add_to_event_list = function(givenDay, dateUIContainer){
     const dateUIElement = document.createElement('div');
     dateUIElement.id = `${givenDay.getFullYear()}-${String(givenDay.getMonth() + 1).padStart(2, "0")}-${String(givenDay.getDate()).padStart(2, "0")}`;
-    dateUIElement.textContent = givenDay.toUTCString();
+    dateUIElement.textContent = givenDay.toDateString();
     dateUIContainer.appendChild(dateUIElement);
 }
 
