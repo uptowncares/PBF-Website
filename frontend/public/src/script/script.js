@@ -1,13 +1,44 @@
 'use strict';
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
+    scroll_event_functionality();
     toggle_menu_functionality();
     page_highlight();
     header_contact_navigation();
 
-
 });
+
+const scroll_event_functionality = function(){
+    const windowHeight = window.innerHeight;
+    const topViewRange = (windowHeight / 2) + (windowHeight / 3);
+    const bottomViewRange = (windowHeight / 2) - (windowHeight / 8);
+
+    
+    const sampleText = Array.from(document.getElementsByTagName("h1"));
+    check_visibility_range(sampleText, topViewRange, bottomViewRange, windowHeight);
+    document.body.addEventListener("scroll", () => {
+        check_visibility_range(sampleText, topViewRange, bottomViewRange, windowHeight);
+    }, true);
+}
+
+const check_visibility_range = function(sampleText, topViewRange, bottomViewRange, windowHeight){
+    for(let i = 0; i < sampleText.length; i++){
+        const elementPosition = Math.floor(windowHeight - (sampleText[i].getBoundingClientRect().top));
+        if(((elementPosition < topViewRange) && (elementPosition > bottomViewRange))){
+            if(!sampleText[i].classList.contains("h1-show")){
+                sampleText[i].classList.add("h1-show");
+                break;
+            }
+        }
+        else{
+            if(sampleText[i].classList.contains("h1-show")){
+                sampleText[i].classList.remove("h1-show");
+            }
+        }
+    };
+}
 
 const header_contact_navigation = function(){
     const button = document.getElementById("header-actions").children[0];
