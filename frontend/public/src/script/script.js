@@ -18,7 +18,7 @@ const scroll_event_functionality = function(){
 
     const sampleText = Array.from(document.getElementsByTagName("h1"));
     check_visibility_range(sampleText, topViewRange, bottomViewRange, windowHeight);
-    document.body.addEventListener("scroll", () => {
+    window.addEventListener("scroll", () => {
         check_visibility_range(sampleText, topViewRange, bottomViewRange, windowHeight);
     }, true);
 }
