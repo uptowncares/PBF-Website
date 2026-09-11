@@ -15,7 +15,7 @@ const scroll_event_functionality = function(){
     const topViewRange = (windowHeight / 2) + (windowHeight / 3);
     const bottomViewRange = (windowHeight / 2) - (windowHeight / 8);
 
-    
+
     const sampleText = Array.from(document.getElementsByTagName("h1"));
     check_visibility_range(sampleText, topViewRange, bottomViewRange, windowHeight);
     document.body.addEventListener("scroll", () => {
@@ -29,7 +29,6 @@ const check_visibility_range = function(sampleText, topViewRange, bottomViewRang
         if(((elementPosition < topViewRange) && (elementPosition > bottomViewRange))){
             if(!sampleText[i].classList.contains("h1-show")){
                 sampleText[i].classList.add("h1-show");
-                break;
             }
         }
         else{
