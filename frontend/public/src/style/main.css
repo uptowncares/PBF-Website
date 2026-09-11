@@ -1558,7 +1558,7 @@ button:active{
     border-radius: 50%;
     opacity: 0.5;
     z-index: 1;
-    background-image: url("../../icons/icons8-caring-100.png");
+    background-image: url("../icons/icons8-donate-100.png");
 }
 
 @media(min-width: 1100px){
