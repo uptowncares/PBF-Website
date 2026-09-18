@@ -1,6 +1,4 @@
 
-
-
 ###
 
 GET http://127.0.0.1:3000/
@@ -22,8 +20,8 @@ POST http://127.0.0.1:3000/volunteer-registration
 Content-Type: application/json
 
 {
-    "name": "Blake Anderson",
-    "email": "andersonblake@gmail.com",
+    "name": "Bryce Calhoun",
+    "email": "calhounbryce13@gmail.com",
     "event": "Serve a soul",
     "date": "3/14/2023",
     "description": "Something something something lightside"

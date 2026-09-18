@@ -39,6 +39,16 @@ const add_new_volunteer = async(name, email, event, date, description) => {
     }
 }
 
+const remove_volunteer = async(name, email, event, date) => {
+    try{
+        await volunteerModel.findOneAndDelete({name: name, email: email, event: event, date: date});
+        return true;
+    }catch(error){
+        console.error(error);
+    }
+    return false;
+}
+
 const add_new_contact = async(name, email, subject, message) => {
     const newContact = contactModel({name: name, email: email, subject: subject, message: message});
     try{
@@ -54,5 +64,5 @@ db.once("open", () => {
     console.log("Connected to MongoDB Database");
 });
 
-module.exports = { add_new_contact, add_new_volunteer }
+module.exports = { add_new_contact, add_new_volunteer, remove_volunteer }
 

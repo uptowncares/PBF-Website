@@ -5,7 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +15,7 @@
     "nodemon": "3.1.11",
     "mongoose": "9.2.2",
     "dotenv": "17.3.1",
-    "cors": "2.8.6"
+    "cors": "2.8.6",
+    "postmark": "5.1.0"
   }
 }
