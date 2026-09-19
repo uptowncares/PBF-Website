@@ -1,6 +1,6 @@
 require('dotenv/config');
 const express = require('express');
-//const model = require('./model.js');
+const model = require('./model.js');
 const cors = require('cors');
 const postmark = require('postmark');
 const postmarkClient = new postmark.ServerClient(process.env["POSTMARK_TOKEN"]);
@@ -46,8 +46,8 @@ app.post('/volunteer-registration', async(req, res) => {
         const event = req.body["event"];
         const description = req.body["description"];
         try{
-            //const newVolunteer = await model.add_new_volunteer(name, email, event, date, description);
-            if(true){
+            const newVolunteer = await model.add_new_volunteer(name, email, event, date, description);
+            if(newVolunteer){
                 try{
                     postmarkClient.sendEmail({
 

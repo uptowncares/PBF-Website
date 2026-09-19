@@ -475,7 +475,7 @@ h3{
     margin-bottom: 7.5vh;
     width: 50%;
     padding: 10%;
-    font-size: 5vw;
+    font-size: 10vw;
     border-radius: 30px;
     transition: height 1s ease-in-out;
     color: var(--main-color);
