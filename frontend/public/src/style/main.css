@@ -37,6 +37,7 @@
 *{
     font-family: "Zain";
     -webkit-tap-highlight-color: transparent;
+    cursor: url("../media/PBF\ Vector.png"), auto !important;
 }
 
 html, body{
