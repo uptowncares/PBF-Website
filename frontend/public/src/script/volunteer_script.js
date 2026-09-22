@@ -1,4 +1,6 @@
 
+
+const TUESDAY = 2;
 document.addEventListener("DOMContentLoaded", () => {
     populate_event_dates();
     dismiss_notification_functionality();
@@ -22,7 +24,7 @@ const populate_event_dates = function(){
     let givenDay = new Date();
     while(((dateUIContainer.children).length) < 5){
         givenDay.setDate(givenDay.getDate() + 1);
-        if(givenDay.getDay() == 2) add_to_event_list(givenDay, dateUIContainer);
+        if(givenDay.getDay() == TUESDAY) add_to_event_list(givenDay, dateUIContainer);
     }
 }
 
