@@ -1,0 +1,49 @@
+frame#lightblue #c5cbc8 #lightgreen;3;dashed Bryce Calhoun, Peggy Beatrice Foundation - Volunteer Sequence
+
+participant "postmark server\ \nUser inbox" as postmark #yellow 
+actor User #yellow
+rparticipant Frontend/Client
+participant Node.js Server 
+participant Node.js Model 
+database MongoDB Database #yellow
+
+
+alt form submission error
+User-#redxFrontend/Client: missing data field
+Frontend/Client--#redxUser: "please fill out entire form"
+end
+activate User
+User-#blue>Frontend/Client: successfully submits form
+activate Frontend/Client
+Frontend/Client-#blue>Node.js Server: {name, email, date, event, description}
+activate Node.js Server
+Node.js Server-#blue>Node.js Model: add_volunteer(name, email, date, event, description)
+activate Node.js Model
+Node.js Model-#blue>MongoDB Database: volunteer.save()
+activate MongoDB Database
+MongoDB Database--#blue>Node.js Model: [success]
+deactivate MongoDB Database
+Node.js Model--#blue>Node.js Server: true
+deactivate Node.js Model
+Node.js Server-#blue>postmark: event information
+activate postmark
+postmark--#blue>Node.js Server: [success]
+deactivate postmark
+Node.js Server--#blue>Frontend/Client: status : 201
+deactivate Node.js Server
+Frontend/Client--#blue>User: "thank you"
+deactivate User
+deactivate Frontend/Client
+
+alt DBMS error
+MongoDB Database--#redxNode.js Model: [fail]
+Node.js Model--#redxNode.js Server: false
+Node.js Server--#redxFrontend/Client: status : 500
+Frontend/Client--#redxUser: "please try again"
+end
+
+alt postmark error
+postmark--#redxNode.js Server: [fail]
+Node.js Server--#redxFrontend/Client: status : 502, event data : {}
+Frontend/Client--#redxUser: event information
+end
