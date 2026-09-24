@@ -131,16 +131,18 @@ const send_volunteer_request = async(name, email, date, event, description, inpu
         switch(response.status){
             case 201:
                 clear_form(inputs, textarea);
-                system_notification("Thank you for signing up!", "Please retain the information from the volunteer event for your own records.", true);
+                system_notification("Thank you for signing up, we'll see you soon!", "You should expect an email to confirm your registration to our event! Please check your spam/junk folder.", true);
                 break;
             case 400:
                 system_notification("please try again.", "There was an issue with that request", true);
                 break;
             case 500:
-                system_notification("please try again", "The server had an issue processing that request", true);
+                system_notification("please try again", "There seems to have been an issue adding your request to our records", true);
                 break;
-            default:
-                system_notification( "please try again", "There has been an unexpected issue", true);
+            case 502:
+                clear_form(inputs, textarea);
+                const eventData = (await response.json())["data"];
+                system_notification( "Thank you for signing up!", `We had an issue reaching your inbox, please retain the event information for your records:${eventData}`, true);
                 break;
         }
     }catch(error){

@@ -134,19 +134,19 @@ app.post('/volunteer-registration', async(req, res) => {
                     "TextBody": "Hello from PBF!",
                     "MessageStream": "Outbound"
                 });
-                res.status(201).json("success");
+                res.sendStatus(201);
                 console.log(`\nNEW VOLUNTEER: ${name} for ${event} on ${date}`);
             }catch(error){
-                console.error(error);
-                await model.remove_volunteer(name, email, event, date);
-                res.status(500).json({"error": "unable to send confirmation email to volunteer"})
+                console.error("POSTMARK SERVER ERROR: ", error);
+                res.status(502).json({"data": utils.addressInstructions[event]});
             }
             return;
         }
-        res.status(500).json({"error": "model issue registering that volunteer"});
+        console.error("DBMS ERROR");
+        res.sendStatus(500);
         return;
     }
-    res.status(400).json({"error": "missing data in body"});
+    res.sendStatus(400);
     return;
 });
 
