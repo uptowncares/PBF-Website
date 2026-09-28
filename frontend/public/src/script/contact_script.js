@@ -51,7 +51,10 @@ const clear_contact_form = function(inputs, textarea){
 }
 
 const send_contact_request = async(name, email, subject, message, inputs, textarea) => {
-    const animationInstance = loader.show_loading();
+    let animationInstance = false;
+    const timer = setTimeout(() => {
+        animationInstance = loader.show_loading();
+    }, 500);
     try{
         const response = await fetch("https://pbf-website.onrender.com/contact-us", {
             method: "POST",
@@ -83,7 +86,8 @@ const send_contact_request = async(name, email, subject, message, inputs, textar
         system_notification("Please try again.", "There was a network issue sending that request.", true);
     }
     finally{
-        loader.dismiss_loading(animationInstance);
+        clearTimeout(timer);
+        if(animationInstance) loader.dismiss_loading(animationInstance);
     }
 }
 
