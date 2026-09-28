@@ -486,7 +486,7 @@ h3{
     font-size: 10vw;
     border-radius: 30px;
     transition: height 1s ease-in-out;
-    color: var(--group2) !important;
+    color: var(--group4) !important;
 }
 
 .action-card-expanded{
