@@ -15,7 +15,6 @@
     --magenta: rgba(231, 22, 197, 1);
     --blueish: rgba(79, 43, 255, 1);
     --lighter-blusih: rgb(140, 118, 252);
-    
     --dark-purple: rgba(44, 6, 79, 1);
     --cyanish: rgba(13, 204, 255, 1);
 
@@ -23,6 +22,11 @@
     --group2: var(--dark-purple);
     --group3: var(--magenta);
     --group4: white;
+
+    --group1-alt: var(--dark-purple);
+    --group2-alt: white;
+    --group3-alt: var(--dark-purple);
+    --group4-alt: var(--magenta);
 
     --main-alt: var(--blueish);
     --main-alt-3: var(--lighter-blusih);
@@ -482,7 +486,7 @@ h3{
     font-size: 10vw;
     border-radius: 30px;
     transition: height 1s ease-in-out;
-    color: var(--group4);
+    color: var(--group2) !important;
 }
 
 .action-card-expanded{
@@ -554,6 +558,7 @@ h3{
 .program-action{
     cursor: pointer;
     transition: color .35s ease-in-out;
+    color: var(--group2);
 }
 
 .program-action:hover{
