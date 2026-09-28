@@ -1,5 +1,7 @@
 
 
+import loader from './loading_script.js';
+
 const TUESDAY = 2;
 document.addEventListener("DOMContentLoaded", () => {
     populate_event_dates();
@@ -130,6 +132,10 @@ const clear_form = function(inputs, textarea){
 }
 
 const send_volunteer_request = async(name, email, date, event, description, inputs, textarea) => {
+    let animationInstance = false;
+    const timer = setTimeout(() => {
+        animationInstance = loader.show_loading();
+    }, 500);
     try{
         const response = await fetch("https://pbf-website.onrender.com/volunteer-registration", {
             method: "POST",
@@ -162,6 +168,9 @@ const send_volunteer_request = async(name, email, date, event, description, inpu
     }catch(error){
         console.log(error);
         system_notification("please try again.", "There was a network issue sending that request", true);
+    }finally{
+        clearTimeout(timer);
+        if(animationInstance) loader.dismiss_loading(animationInstance);
     }
 }
 
