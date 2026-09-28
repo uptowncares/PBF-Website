@@ -78,6 +78,16 @@ const volunteer_form_functionality = function(){
     form.addEventListener("submit", (event) => process_volunteer_request(event));
 }
 
+const available_date = function(date, event){
+    const userDate = new Date(String(date).replace(/-/g, '\/'));
+    if(((userDate.getDate()) - (new Date().getDate())) > 0){
+        if(event == "serve-a-soul"){
+            if(userDate.getDay() == 2) return true;
+        }
+    }
+    return false;
+}
+
 const process_volunteer_request = function(event){
     event.preventDefault();
     const inputs = Array.from(document.getElementsByTagName('input'));
@@ -98,7 +108,11 @@ const process_volunteer_request = function(event){
             const date = inputs[2].value;
             const event = select.value;
             const description = textarea.value;
-            send_volunteer_request(name, email, date, event, description, inputs, textarea);
+            if(available_date(date, event)){
+                send_volunteer_request(name, email, date, event, description, inputs, textarea);
+                return;
+            }
+            system_notification("Uh Oh!", "Please choose another date, the selected event is not available on that date", true);
             return;
         }
         system_notification("Please fill out the entire form", "", true);
