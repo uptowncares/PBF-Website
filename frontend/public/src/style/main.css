@@ -18,7 +18,6 @@
     
     --dark-purple: rgba(44, 6, 79, 1);
     --cyanish: rgba(13, 204, 255, 1);
-    --main-color: white;
 
     --group1: var(--cyanish);
     --group2: var(--dark-purple);
@@ -53,7 +52,7 @@ html, body{
 body{
     min-height: 100vh;
     margin: 0px;
-    background-color: var(--main-color);
+    background-color: var(--group4);
     background-image: linear-gradient(to left, var(--group1), var(--group4));
 }
 
@@ -113,7 +112,7 @@ header{
     #header-actions > div:first-child{
         cursor: pointer;
         display: flex;
-        color: var(--main-color);
+        color: var(--group4);
         border-radius: 15px;
         background-image: linear-gradient(to top right, var(--group3), var(--main-alt-3));
         padding: 1vw;
@@ -380,7 +379,7 @@ h2{
 }
 
 #gallery h2{
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .no-fade-in-text{
@@ -549,7 +548,7 @@ h3{
     overflow-x: hidden;
     font-size: 8vw;
     font-weight: 700;
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .program-action{
@@ -805,7 +804,7 @@ button:active{
     }
     #options-container a:hover{
         font-size: 4vw;
-        color: var(--main-color);
+        color: var(--group4);
     }
     .floating-container{
         margin-left: 20vw;
@@ -825,7 +824,7 @@ button:active{
 }
 
 .more-info * {
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .more-info > div{
@@ -839,7 +838,7 @@ button:active{
 
 .more-info > div > div:first-child{
     padding: 2%;
-    border: 5px solid var(--main-color);
+    border: 5px solid var(--group4);
     border-radius: 20px;
 }
 
@@ -959,9 +958,8 @@ button:active{
     background-size: contain;
     height: 40vw;
     width: 70vw;
-    border: 5px solid var(--main-color);
+    border: 5px solid var(--group4);
     border-radius: 20px;
-
 }
 
 @media(min-width: 1100px){
@@ -987,7 +985,7 @@ button:active{
     font-weight: lighter;
     border: 2px solid var(--border);
     transition: height 0.5s ease-in-out;
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 @media(min-width: 1100px){
@@ -1010,7 +1008,7 @@ button:active{
 }
 
 #about-founder h2{
-    color: var(--main-color) !important;
+    color: var(--group4) !important;
     font-weight: normal;
     white-space: nowrap;
 }
@@ -1119,7 +1117,7 @@ button:active{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: var(--main-color);
+    background-color: var(--group4);
     transition: opacity 1s ease-in-out;
     z-index: 3;
 }
@@ -1242,7 +1240,7 @@ button:active{
 #donations > div:nth-child(1) > div:first-child > div:first-child{
     background-image: url('../../media/PBF\ Vector.png');
     background-size: contain;
-    background-color: var(--main-color);
+    background-color: var(--group4);
 }
 
 #donations > div > div:first-child{
@@ -1297,7 +1295,7 @@ button:active{
     padding-left: 2vw;
     padding-right: 2vw;
     border-radius: 20px;
-    color: var(--main-color);
+    color: var(--group4);
     background-color: rgb(224, 92, 202);
 }
 
@@ -1306,7 +1304,7 @@ button:active{
 }
 
 .offset-child h1, h3{
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .offset-child h3{
@@ -1334,7 +1332,7 @@ button:active{
 }
 
 #about-founder div{
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 #about-founder h2{
@@ -1342,7 +1340,7 @@ button:active{
 }
 
 #about-founder h1{
-    color: var(--main-color) !important;
+    color: var(--group4) !important;
 }
 
 #about-founder > div > div:nth-child(2){
@@ -1415,13 +1413,13 @@ button:active{
 
 .event > div:first-child > div:nth-child(2){
     font-size: 10vw;
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .date-container > div:first-child{
     font-size: 8vw;
     text-decoration: underline;
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .event > div:first-child > div:first-child{
@@ -1443,7 +1441,7 @@ button:active{
 .event-data > div:first-child, .event-data > div:nth-child(2){
     font-size: 7vw;
     text-align: center;
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .dates > div{
@@ -1453,7 +1451,7 @@ button:active{
     border-radius: 1.75vh;
     font-size: 5vw;
     text-align: center;
-    color: var(--main-color);
+    color: var(--group4);
 }
 
 .dates{
@@ -1554,7 +1552,7 @@ button:active{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--main-color);
+    color: var(--group4);
     font-size: 5vw;
     position: absolute;
     bottom: 0%;
