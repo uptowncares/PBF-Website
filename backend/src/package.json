@@ -7,9 +7,9 @@
     "start": "node server.js",
     "test": "nodemon server.js"
   },
-  "author": "",
+  "author": "Bryce Calhoun",
   "license": "ISC",
-  "description": "",
+  "description": "The backend system for peggybeatricefoundation.org",
   "dependencies": {
     "express": "5.2.1",
     "nodemon": "3.1.11",
