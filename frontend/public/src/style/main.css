@@ -503,7 +503,7 @@ h3{
     #actions > .action-card:hover{
         font-size: 4vw;
         width: 70%;
-        color: var(--group4);
+        color: var(--group4) !important;
         background-image: linear-gradient(to top, var(--main-alt-3), var(--group3));
     }
 }
