@@ -168,7 +168,7 @@ header{
 #logo-text-parent > *{
     max-width: none !important;
     align-self: flex-start;
-    color: var(--dark-purple);
+    color: var(--group2);
 }
 
 #logo-text-top{
@@ -364,7 +364,7 @@ h1{
     margin-left: 5vw;
     font-size: 10vw;
     font-weight: 700;
-    color: var(--dark-purple);
+    color: var(--group2);
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
@@ -383,7 +383,7 @@ h2{
     text-align: center;
     font-weight: 300;
     margin-top: 1vh;
-    color: var(--dark-purple);
+    color: var(--group2);
 }
 
 #gallery h2{
@@ -724,6 +724,7 @@ footer{
     padding-top: 3vh;
     padding-bottom: 10vh;
     margin-bottom: 0vh !important;
+    color: var(--group2);
 }
 
 footer a{
