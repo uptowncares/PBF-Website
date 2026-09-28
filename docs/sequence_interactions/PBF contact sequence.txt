@@ -1,0 +1,36 @@
+frame#lightblue #c5cbc8 #lightgreen;3;dashed Bryce Calhoun, Peggy Beatrice Foundation - Contact Sequence
+
+actor User #yellow
+rparticipant Frontend/client
+participant Node.js server
+participant Node.js model
+database MongoDB #yellow
+
+
+alt missing data in contact form
+User-#redxFrontend/client: missing data field
+Frontend/client-#redxUser: "please fill out the whole form"
+end
+
+User-#blue>Frontend/client: successfully submit contact form
+activate Frontend/client
+
+Frontend/client-#blue>Node.js server: (name, email, subject, message)
+activate Node.js server
+Node.js server-#blue>Node.js model: (name, email, subject, message)
+activate Node.js model
+Node.js model-#blue>MongoDB: contact.save()
+MongoDB-#blue>Node.js model: [success]
+Node.js model-#blue>Node.js server: true
+deactivate Node.js model
+Node.js server-#blue>Frontend/client: 201 created
+deactivate Node.js server
+Frontend/client-#blue>User: "thank you!"
+deactivate Frontend/client
+
+alt DBMS error
+MongoDB-#redxNode.js model: [fail]
+Node.js model-#redxNode.js server: false
+Node.js server-#redxFrontend/client: error : 500
+Frontend/client-#redxUser: "please try again"
+end

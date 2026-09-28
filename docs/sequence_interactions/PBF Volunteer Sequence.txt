@@ -7,10 +7,13 @@ participant Node.js Server
 participant Node.js Model 
 database MongoDB Database #yellow
 
-
-alt form submission error
+alt invalid submission - empty field(s)
 User-#redxFrontend/Client: missing data field
 Frontend/Client--#redxUser: "please fill out entire form"
+end
+alt invalid submission - date
+User-#redxFrontend/Client: invalid event date
+Frontend/Client--#redxUser: "please choose an available date"
 end
 activate User
 User-#blue>Frontend/Client: successfully submits form

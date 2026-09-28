@@ -1,12 +1,13 @@
 require('dotenv/config');
 const express = require('express');
-const model = require('./model.js');
 const cors = require('cors');
 const postmark = require('postmark');
 const postmarkClient = new postmark.ServerClient(process.env["POSTMARK_TOKEN"]);
 const app = express();
-const PORT = process.env.PORT || 3000;
+const model = require('./model.js');
 const utils = require("./utils.js");
+const PORT = process.env.PORT || 3000;
+
 
 app.use(express.json());
 app.use(cors({
