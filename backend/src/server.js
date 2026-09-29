@@ -9,17 +9,14 @@ const utils = require("./utils.js");
 const PORT = process.env.PORT || 3000;
 
 
+console.log(utils.addressInstructions['serve-a-soul']);
+
 app.use(express.json());
 app.use(cors({
     origin : "https://peggybeatricefoundation.org",
     methods : ["POST", "OPTIONS"],
     allowedHeaders : ["Content-Type"]
 }));
-
-
-
-
-
 
 
 app.post('/contact-us', async(req, res) => {
@@ -105,20 +102,6 @@ app.post('/volunteer-registration', async(req, res) => {
                                             role="presentation"
                                         >
                                             <tr>
-
-                                                <!-- Logo -->
-                                                <td
-                                                    valign="middle"
-                                                    style="
-                                                        padding-right: 20px;
-                                                        font-size: 70px;
-                                                        line-height: 70px;
-                                                        color: #000000;
-                                                    "
-                                                >
-                                                    ♡
-                                                </td>
-
                                                 <!-- Foundation Name -->
                                                 <td
                                                     valign="middle"
@@ -172,7 +155,7 @@ app.post('/volunteer-registration', async(req, res) => {
                                                 font-weight: 700;
                                             "
                                         >
-                                            Hi ${name}!
+                                            Hi ${name}! Thank you so much for volunteering with us.
                                         </div>
 
                                     </td>
@@ -198,7 +181,7 @@ app.post('/volunteer-registration', async(req, res) => {
                                         >
                                             Here are your address instructions
                                             <br>
-                                            for getting to us.
+                                            for getting here.
                                         </div>
 
                                     </td>
@@ -333,7 +316,7 @@ app.post('/volunteer-registration', async(req, res) => {
                                                             font-weight: 400;
                                                         "
                                                     >
-                                                        ${date}
+                                                        ${new Date(date.replace("-","\/")).toDateString()}
                                                     </div>
                                                 </td>
                                             </tr>
@@ -413,7 +396,10 @@ app.post('/volunteer-registration', async(req, res) => {
                                                             word-break: break-word;
                                                         "
                                                     >
-                                                        ${utils.addressInstructions[event]}
+                                                        ${utils.addressInstructions[event].street}
+                                                        ${utils.addressInstructions[event].city}
+                                                        ${utils.addressInstructions[event].state}
+                                                        ${utils.addressInstructions[event].zip}
                                                     </div>
                                                 </td>
                                             </tr>
@@ -482,17 +468,6 @@ app.post('/volunteer-registration', async(req, res) => {
                                             color: #000000;
                                         "
                                     >
-
-                                        <div
-                                            style="
-                                                font-size: 27px;
-                                                line-height: 35px;
-                                                padding-bottom: 15px;
-                                            "
-                                        >
-                                            ♥
-                                        </div>
-
                                         <div
                                             style="
                                                 font-size: 17px;
@@ -526,7 +501,7 @@ app.post('/volunteer-registration', async(req, res) => {
             }
             return;
         }
-        console.error("DBMS ERROR");
+        console.error("DBMS ERROR ON VOLUNTEER REGISTRATION");
         res.sendStatus(500);
         return;
     }
