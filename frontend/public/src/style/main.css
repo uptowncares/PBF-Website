@@ -3,7 +3,7 @@
 
 :root{
     --border: rgba(255, 0, 0, 0);
-    --media-outline: var(--main-alt-3);
+    --media-outline: var(--group5);
     --footer-elements-margin: 3vh;
     --grandchild-media-dimensions: 70vw;
     --program-content-max-width: 75vw;
@@ -22,14 +22,14 @@
     --group2: var(--dark-purple);
     --group3: var(--magenta);
     --group4: white;
+    --group5: var(--lighter-blusih);
+
 
     --group1-alt: var(--dark-purple);
     --group2-alt: white;
     --group3-alt: var(--dark-purple);
     --group4-alt: var(--magenta);
-
-    --main-alt: var(--blueish);
-    --main-alt-3: var(--lighter-blusih);
+    --group5-alt: black;
 }
 
 ::-webkit-scrollbar{
@@ -97,11 +97,17 @@ header{
     display: none;
     transition: transform 0.1s ease-in-out;
     box-shadow: 5px 5px 5px grey;
-
 }
+
+
 
 #header-actions > div:first-child:hover{
     transform: scale(1.1);
+}
+
+
+#night-mode{
+    display: none;
 }
 
 @media(min-width: 1100px){
@@ -113,12 +119,24 @@ header{
         border: 2px solid var(--border);
         
     }
+    #night-mode{ 
+        display: flex;
+        height: 11vh;
+        width: 6vw;
+        cursor: pointer;
+        border-radius: 20px;
+        box-shadow: 5px 5px 5px grey;
+        background-image: linear-gradient(to top right, var(--group3), var(--group5));
+    }
+    #night-mode:active{
+        filter: brightness(75%);
+    }
     #header-actions > div:first-child{
         cursor: pointer;
         display: flex;
         color: var(--group4);
         border-radius: 15px;
-        background-image: linear-gradient(to top right, var(--group3), var(--main-alt-3));
+        background-image: linear-gradient(to top right, var(--group3), var(--group5));
         padding: 1vw;
         border: 2px solid var(--border);
         font-size: 2vw;
@@ -329,13 +347,13 @@ header > *{
 .right-offset-child{
     justify-content: flex-start;
     left: 20%;
-    background-image: linear-gradient(to bottom right, var(--main-alt-3), var(--group3));
+    background-image: linear-gradient(to bottom right, var(--group5), var(--group3));
 }
 
 .left-offset-child{
     justify-content: flex-end;
     right: 20%;
-    background-image: linear-gradient(to bottom left, var(--group3), var(--main-alt-3));
+    background-image: linear-gradient(to bottom left, var(--group3), var(--group5));
 }
 
 .offset-content-grandchild{
@@ -450,7 +468,7 @@ h3{
     top: 5%;
     height: 90vh;
     border: 2px solid var(--border);
-    background-image: linear-gradient(to top, var(--group3), var(--main-alt-3));
+    background-image: linear-gradient(to top, var(--group3), var(--group5));
     padding-top: 4vh;
     border-radius: 50px;
     transition: left 0.75s ease-in-out;
@@ -504,7 +522,7 @@ h3{
         font-size: 4vw;
         width: 70%;
         color: var(--group4) !important;
-        background-image: linear-gradient(to top, var(--main-alt-3), var(--group3));
+        background-image: linear-gradient(to top, var(--group5), var(--group3));
     }
 }
 
@@ -559,6 +577,10 @@ h3{
     cursor: pointer;
     transition: color .35s ease-in-out;
     color: var(--group2);
+}
+
+#donations .program-action{
+    width: 100%;
 }
 
 .program-action:hover{
@@ -1238,7 +1260,7 @@ button:active{
     justify-content: flex-start;
     align-items: center;
     gap: 30px;
-
+    width: 100%;
 }
 
 
@@ -1252,8 +1274,25 @@ button:active{
     margin-bottom: 0vh;
 }
 
+.donation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 90%;
+    background-image: linear-gradient(to top right, var(--group1), var(--group5));
+    color: var(--group4);
+    font-size: 9vw;
+    padding: 5%;
+    border-radius: 3vw;
+}
+
 
 @media(min-width: 1100px){
+
+    .donation{
+        font-size: 3vw;
+    }
     #desktop-auxilary{
         display: flex;
         flex-direction: row;

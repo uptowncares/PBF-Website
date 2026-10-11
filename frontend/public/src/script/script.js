@@ -1,14 +1,52 @@
 'use strict';
 
-
-
 document.addEventListener("DOMContentLoaded", () => {
     scroll_event_functionality();
     toggle_menu_functionality();
     page_highlight();
     header_contact_navigation();
-
+    //night_mode_functionality();
 });
+
+const night_mode_functionality = function(){
+    switch_UI_modes();
+    const nightMode = document.getElementById("night-mode");
+    nightMode.addEventListener("click", (event) => {
+        switch_UI_modes();
+    });
+}
+
+const switch_UI_modes = function(){
+    if(!(localStorage.getItem("PBF-utility--night-mode"))){
+        localStorage.setItem("PBF-utility--night-mode", "true");
+    }
+    else if(localStorage.getItem("PBF-utility--night-mode") == "true"){
+        for(let i = 1; i <= 5; i++){
+            night_to_day(i);
+        }
+        localStorage.setItem("PBF-utility--night-mode", "false");
+    }
+    else{
+        for(let i = 1; i <= 5; i++){
+            day_to_night(i);
+        }
+        localStorage.setItem("PBF-utility--night-mode", "true");
+    }
+}
+
+const day_to_night = function(i){
+    const temp = getComputedStyle(document.documentElement).getPropertyValue(`--group${i}`);
+    const newColor = getComputedStyle(document.documentElement).getPropertyValue(`--group${i}-alt`);
+    document.documentElement.style.setProperty(`--group${i}`, newColor);
+    document.documentElement.style.setProperty(`--group${i}-alt`, temp);
+}
+
+const night_to_day = function(i){
+    const temp = getComputedStyle(document.documentElement).getPropertyValue(`--group${i}-alt`);
+    const newColor = getComputedStyle(document.documentElement).getPropertyValue(`--group${i}`);
+    document.documentElement.style.setProperty(`--group${i}-alt`, newColor);
+    document.documentElement.style.setProperty(`--group${i}`, temp);
+}
 
 const scroll_event_functionality = function(){
     const windowHeight = window.innerHeight;
