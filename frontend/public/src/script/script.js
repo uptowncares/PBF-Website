@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     scroll_event_functionality();
     toggle_menu_functionality();
     page_highlight();
-    header_contact_navigation();
+    header_donate_navigation();
     dismiss_notification_functionality();
     night_mode_functionality();
 });
@@ -80,10 +80,10 @@ const check_visibility_range = function(sampleText, topViewRange, bottomViewRang
     };
 }
 
-const header_contact_navigation = function(){
+const header_donate_navigation = function(){
     const button = document.getElementById("header-actions").children[0];
     button.addEventListener("click", () => {
-        window.location.assign('/contact');
+        window.location.assign('/donate');
     });
 }
 
