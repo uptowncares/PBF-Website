@@ -5,14 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle_menu_functionality();
     page_highlight();
     header_contact_navigation();
-    //night_mode_functionality();
+    dismiss_notification_functionality();
+    night_mode_functionality();
 });
 
+
 const night_mode_functionality = function(){
-    switch_UI_modes();
+    //switch_UI_modes();
     const nightMode = document.getElementById("night-mode");
     nightMode.addEventListener("click", (event) => {
-        switch_UI_modes();
+        system_notification("Coming soon...", "You found an exciting new feature! Check back later to find out what.", true);
+        //switch_UI_modes();
     });
 }
 
@@ -135,5 +138,32 @@ const toggle_hamburger = function(animation){
     }
     else{
         animation.playSegments([0, 15], true);
+    }
+}
+
+
+const dismiss_notification_functionality = function(){
+    const button = document.getElementById('notification-confirmation');
+    button.addEventListener('click', () => system_notification("", "", false));
+}
+
+const populate_notification_text = function(parent, h1, h2){
+    const title = parent.children[0];
+    title.textContent = h1;
+    const subtitle = parent.children[1];
+    subtitle.textContent = h2;
+}
+
+const system_notification = function(h1, h2, boolean){
+    const backdrop = document.getElementById('backdrop');
+    const notification = document.getElementById('notification-modal');
+    if(boolean){
+        backdrop.classList.add('show-backdrop');
+        notification.classList.add('show-notification');
+        populate_notification_text(notification, h1, h2);
+    }
+    else{
+        notification.classList.remove('show-notification');
+        backdrop.classList.remove('show-backdrop');
     }
 }
