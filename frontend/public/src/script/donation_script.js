@@ -1,30 +1,13 @@
 'use strict';
 
-
-
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async() => {
         dismiss_notification_functionality();
-        //process_donation();
-
 });
-
 
 const dismiss_notification_functionality = function(){
     const button = document.getElementById('notification-confirmation');
     button.addEventListener('click', () => system_notification("", "", false));
 }
-
-
-
-const process_donation = function(){
-    Array.from(document.getElementsByClassName('donation')).forEach((button) => {
-        button.addEventListener("click", () => {
-            system_notification("Sorry", "We're unable to accept donations at this time, please try again later.", true);
-        })
-    })
-
-}
-
 
 const populate_notification_text = function(parent, h1, h2){
     const title = parent.children[0];
@@ -32,7 +15,6 @@ const populate_notification_text = function(parent, h1, h2){
     const subtitle = parent.children[1];
     subtitle.textContent = h2;
 }
-
 
 const system_notification = function(h1, h2, boolean){
     const backdrop = document.getElementById('backdrop');
